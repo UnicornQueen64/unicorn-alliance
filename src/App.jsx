@@ -172,12 +172,15 @@ export default function App() {
         /* ══════════════════════════════════════
            3. MAKERS — stacked (image top, text bottom)
         ══════════════════════════════════════ */
-        .makers-stack{display:flex;flex-direction:column;}
+        .makers-stack{display:flex;flex-direction:column;gap:0;}
         .makers-img-top{
           width:100%;overflow:hidden;
           border-radius:18px 18px 0 0;
+          display:block;
+          line-height:0;
+          font-size:0;
         }
-        .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;}
+        .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;vertical-align:bottom;}
         .makers-text-bottom{padding:44px 52px;background:var(--card-white);}
         .makers-text-bottom h2{
           font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
@@ -450,7 +453,7 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
           .hero-img-block{min-height:320px;}
-          .hero-card{background:transparent;}
+          .hero-card{background:var(--card-cream);}
 
           /* Bigger mobile titles */
           .who-section-title{font-size:1.3rem;}
