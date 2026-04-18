@@ -61,9 +61,9 @@ export default function App() {
           -webkit-backdrop-filter:blur(16px);
           border-bottom:1px solid rgba(255,255,255,0.12);
         }
-        .nav-brand{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.92);font-weight:400;}
+        .nav-brand{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.92);font-weight:400;font-family:var(--serif);}
         .nav-links{display:flex;gap:36px;}
-        .nav-links a{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.78);text-decoration:none;transition:color 0.2s;}
+        .nav-links a{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.78);text-decoration:none;transition:color 0.2s;font-family:var(--serif);}
         .nav-links a:hover{color:#fff;}
 
         /* ── CARD BASE ── */
@@ -86,169 +86,184 @@ export default function App() {
         .d5{transition-delay:0.40s;}.d6{transition-delay:0.48s;}
 
         /* ── SHARED ── */
-        .label{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal-label);display:block;margin-bottom:14px;}
+        .label{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal-label);display:block;margin-bottom:14px;font-family:var(--serif);}
         .divider{width:60px;height:1px;background:var(--gold);margin:20px 0;}
 
         /* ── 1. HERO ── */
-        #hero{
-          min-height:100vh;display:flex;align-items:center;
-          padding:110px 40px 60px;max-width:980px;margin:0 auto;gap:60px;
+        .hero-card{
+          position:relative;overflow:hidden;
+          border-radius:18px;max-width:900px;margin:0 auto 20px;
+          min-height:92vh;
+          display:flex;align-items:center;justify-content:flex-start;
+          box-shadow:0 4px 40px rgba(30,60,10,0.25);
         }
-        .hero-left{flex:1;}
-        .hero-left h1{
+        .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+        .hero-overlay{
+          position:absolute;inset:0;
+          background:linear-gradient(120deg, rgba(10,30,5,0.62) 0%, rgba(20,50,10,0.35) 60%, rgba(10,30,5,0.18) 100%);
+        }
+        .hero-content{
+          position:relative;z-index:2;
+          padding:70px;
+          max-width:580px;
+        }
+        .hero-content h1{
           font-size:clamp(3.5rem,6vw,6rem);font-weight:300;
           letter-spacing:0.1em;line-height:1.0;
           color:#fff;text-transform:uppercase;
-          text-shadow:0 2px 20px rgba(30,60,10,0.3);
+          text-shadow:0 2px 20px rgba(10,30,5,0.4);
           margin-bottom:28px;
+          font-family:var(--serif);
         }
-        .hero-left .hero-sub{
+        .hero-content .hero-sub{
           font-size:1.2rem;font-weight:300;
           color:rgba(255,255,255,0.88);line-height:1.75;
           border-left:2px solid rgba(255,255,255,0.5);
-          padding-left:18px;max-width:420px;
-        }
-        .hero-right{flex:0 0 380px;display:flex;align-items:center;justify-content:center;}
-        .hero-right img{
-          width:360px;height:360px;object-fit:contain;
-          filter:drop-shadow(0 8px 30px rgba(20,50,5,0.45)) brightness(1.05);
+          padding-left:18px;
+          font-family:var(--serif);
         }
 
         /* ── 2. WHO WE ARE ── */
-        .who-inner{display:flex;align-items:center;gap:50px;}
-        .who-logo img{width:180px;height:180px;object-fit:contain;display:block;filter:grayscale(100%) contrast(1.1) brightness(0.82);}
-        .who-text h2{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-dark);margin-bottom:18px;}
-        .who-text p{font-size:1.1rem;font-weight:300;line-height:1.9;color:var(--text-body);}
+        .who-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;}
+        .who-logo{width:280px;height:280px;display:block;margin:0 auto;filter:grayscale(100%) contrast(1.15) brightness(0.78);}
+        .who-tagline{
+          font-size:clamp(2rem,3.5vw,3rem);
+          font-weight:300;
+          letter-spacing:0.18em;
+          text-transform:uppercase;
+          color:var(--text-dark);
+          font-family:var(--serif);
+        }
+        .who-text p{font-size:1.1rem;font-weight:300;line-height:1.9;color:var(--text-body);max-width:620px;margin:0 auto;font-family:var(--serif);}
 
         /* ── 3. MAKERS ── */
         .makers-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
-        .makers-img-col{
-          border-radius:18px 0 0 18px;overflow:hidden;
-          min-height:480px;display:flex;align-items:center;justify-content:center;
-        }
+        .makers-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;}
         .makers-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .makers-text-col{padding:48px 44px;}
-        .makers-text-col h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--text-dark);margin-bottom:10px;}
-        .makers-text-col .intro-p{font-size:0.98rem;font-weight:300;color:var(--text-mid);line-height:1.7;margin-bottom:28px;}
+        .makers-text-col h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);}
+        .makers-text-col .intro-p{font-size:0.98rem;font-weight:300;color:var(--text-mid);lineHeight:1.7;margin-bottom:28px;font-family:var(--serif);}
         .makers-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
         .maker-card{background:rgba(240,248,230,0.7);border:1px solid rgba(120,170,80,0.2);border-radius:10px;padding:20px 18px;transition:transform 0.25s,background 0.25s;}
         .maker-card:hover{transform:translateY(-3px);background:rgba(240,248,230,0.95);}
-        .maker-card h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;}
-        .maker-card p{font-size:0.88rem;font-weight:300;line-height:1.6;color:var(--text-mid);}
+        .maker-card h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;font-family:var(--serif);}
+        .maker-card p{font-size:0.88rem;font-weight:300;line-height:1.6;color:var(--text-mid);font-family:var(--serif);}
 
-        /* ── 4. SETTING ── */
-        .setting-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
-        .setting-img-col{
-          border-radius:18px 0 0 18px;overflow:hidden;
-          min-height:520px;display:flex;align-items:center;justify-content:center;
-        }
-        .setting-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
-        .setting-content{padding:52px 48px;}
-        .setting-content h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:12px;}
-        .setting-sub{font-size:1.15rem;font-weight:300;color:var(--text-body);line-height:1.5;margin-bottom:18px;}
-        .setting-desc{font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--text-mid);margin-bottom:32px;}
-        .setting-features{display:flex;flex-direction:column;gap:22px;}
-        .sf h3{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:5px;}
-        .sf p{font-size:0.93rem;font-weight:300;line-height:1.6;color:var(--text-body);}
-
-        /* ── PHOTO CARDS ── */
-        .photo-card{
-          max-width:900px;margin:0 auto 20px;
-          border-radius:18px;overflow:hidden;
+        /* ── 4. SETTING 1 — full bleed photo ── */
+        .setting1-card{
+          position:relative;overflow:hidden;
+          border-radius:18px;max-width:900px;margin:0 auto 20px;
+          min-height:500px;
+          display:flex;align-items:flex-end;
           box-shadow:0 4px 40px rgba(30,60,10,0.22);
-          position:relative;min-height:380px;
-          display:flex;align-items:center;
         }
-        .photo-card img.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
-        .photo-card .ph-overlay{position:relative;z-index:2;padding:60px 70px;}
-        .photo-card .ph-overlay-bg{position:absolute;inset:0;background:rgba(20,40,10,0.38);z-index:1;}
-        .monument-text{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;line-height:1.4;color:rgba(255,255,255,0.93);text-shadow:0 2px 20px rgba(10,30,5,0.45);}
-        .monument-text em{display:block;font-style:italic;color:rgba(210,238,160,0.96);}
+        .setting1-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+        .setting1-overlay{
+          position:absolute;inset:0;
+          background:linear-gradient(to top, rgba(10,30,5,0.72) 0%, rgba(10,30,5,0.28) 55%, rgba(10,30,5,0.05) 100%);
+        }
+        .setting1-content{position:relative;z-index:2;padding:52px 60px;width:100%;}
+        .setting1-content .s1-label{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(210,238,160,0.9);display:block;margin-bottom:12px;font-family:var(--serif);}
+        .setting1-content h2{font-size:clamp(2.2rem,4vw,3.4rem);font-weight:300;color:#fff;letter-spacing:0.06em;margin-bottom:16px;text-shadow:0 2px 16px rgba(10,30,5,0.4);font-family:var(--serif);}
+        .setting1-content p{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.85);line-height:1.75;max-width:580px;font-family:var(--serif);}
+
+        /* ── 5. SETTING 2 — image + features ── */
+        .setting2-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
+        .setting2-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:520px;}
+        .setting2-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
+        .setting2-content{padding:52px 48px;}
+        .setting-features{display:flex;flex-direction:column;gap:22px;}
+        .sf h3{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:5px;font-family:var(--serif);}
+        .sf p{font-size:0.93rem;font-weight:300;line-height:1.6;color:var(--text-body);font-family:var(--serif);}
 
         /* ── 6. LABORATORY ── */
         .lab-header{text-align:center;margin-bottom:40px;}
-        .lab-header h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;}
-        .lab-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:680px;margin:0 auto;}
+        .lab-header h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .lab-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:680px;margin:0 auto;font-family:var(--serif);}
         .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
         .lab-item{background:rgba(255,255,255,0.55);border:1px solid rgba(140,180,100,0.3);border-radius:12px;padding:28px 24px;transition:transform 0.25s,background 0.25s;}
         .lab-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.8);}
-        .lab-item h3{font-size:1rem;font-weight:600;color:var(--teal);margin-bottom:8px;}
-        .lab-item p{font-size:0.9rem;font-weight:300;line-height:1.65;color:var(--text-mid);}
+        .lab-item h3{font-size:1rem;font-weight:600;color:var(--teal);margin-bottom:8px;font-family:var(--serif);}
+        .lab-item p{font-size:0.9rem;font-weight:300;line-height:1.65;color:var(--text-mid);font-family:var(--serif);}
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(140,180,100,0.25);border-radius:12px;padding:36px 40px;}
-        .no-place .np-label{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal-label);display:block;margin-bottom:12px;}
-        .no-place h3{font-size:1.6rem;font-weight:400;color:var(--text-dark);margin-bottom:14px;letter-spacing:0.02em;}
-        .no-place p{font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-mid);}
+        .no-place .np-label{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal-label);display:block;margin-bottom:12px;font-family:var(--serif);}
+        .no-place h3{font-size:1.9rem;font-weight:400;color:var(--text-dark);margin-bottom:14px;letter-spacing:0.02em;font-family:var(--serif);}
+        .no-place p{font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-mid);font-family:var(--serif);}
+
+        /* ── PHOTO CARDS ── */
+        .photo-card{max-width:900px;margin:0 auto 20px;border-radius:18px;overflow:hidden;box-shadow:0 4px 40px rgba(30,60,10,0.22);position:relative;min-height:380px;display:flex;align-items:center;}
+        .photo-card img.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+        .photo-card .ph-overlay{position:relative;z-index:2;padding:60px 70px;}
+        .photo-card .ph-overlay-bg{position:absolute;inset:0;background:rgba(20,40,10,0.38);z-index:1;}
+        .monument-text{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;line-height:1.4;color:rgba(255,255,255,0.93);text-shadow:0 2px 20px rgba(10,30,5,0.45);font-family:var(--serif);}
+        .monument-text em{display:block;font-style:italic;color:rgba(210,238,160,0.96);}
 
         /* ── 8. PHASE I ── */
         .phase-header{text-align:center;margin-bottom:44px;}
-        .phase-header h2{font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;}
-        .phase-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:640px;margin:0 auto;}
+        .phase-header h2{font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .phase-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:640px;margin:0 auto;font-family:var(--serif);}
         .ritual-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
         .ritual-item{background:rgba(255,255,255,0.5);border:1px solid rgba(140,180,100,0.25);border-radius:12px;padding:26px 22px;transition:transform 0.25s,background 0.25s;}
         .ritual-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.78);}
-        .ritual-item h3{font-size:1rem;font-weight:600;color:var(--teal);margin-bottom:7px;}
-        .ritual-item p{font-size:0.9rem;font-weight:300;line-height:1.6;color:var(--text-mid);}
+        .ritual-item h3{font-size:1rem;font-weight:600;color:var(--teal);margin-bottom:7px;font-family:var(--serif);}
+        .ritual-item p{font-size:0.9rem;font-weight:300;line-height:1.6;color:var(--text-mid);font-family:var(--serif);}
 
         /* ── 9. PHASE II ── */
         .phase2-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
-        .phase2-img{border-radius:12px;overflow:hidden;min-height:380px;display:flex;align-items:center;justify-content:center;}
+        .phase2-img{border-radius:12px;overflow:hidden;min-height:380px;}
         .phase2-img img{width:100%;height:100%;object-fit:cover;display:block;}
-        .phase2-text h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;}
-        .phase2-text p{font-size:0.98rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;}
+        .phase2-text h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);}
+        .phase2-text p{font-size:0.98rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);}
         .phase2-highlight{background:rgba(200,230,180,0.4);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;margin-top:8px;}
-        .phase2-highlight h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;}
-        .phase2-highlight p{font-size:0.9rem;font-weight:300;color:var(--text-mid);line-height:1.65;}
+        .phase2-highlight h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;font-family:var(--serif);}
+        .phase2-highlight p{font-size:0.9rem;font-weight:300;color:var(--text-mid);line-height:1.65;font-family:var(--serif);}
 
         /* ── 10. REVENUE ── */
         .revenue-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
-        .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:center;}
+        .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;}
         .revenue-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .revenue-content{padding:52px 48px;}
-        .revenue-content h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:32px;}
+        .revenue-content h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);}
         .rev-list{display:flex;flex-direction:column;gap:12px;}
         .rev-item{background:rgba(255,255,255,0.55);border:1px solid rgba(140,180,100,0.25);border-radius:10px;padding:20px 22px;transition:transform 0.25s,background 0.25s;}
         .rev-item:hover{transform:translateX(4px);background:rgba(255,255,255,0.8);}
-        .rev-item h3{font-size:1rem;font-weight:600;color:var(--text-dark);margin-bottom:5px;}
-        .rev-item p{font-size:0.88rem;font-weight:300;line-height:1.6;color:var(--text-mid);}
+        .rev-item h3{font-size:1rem;font-weight:600;color:var(--text-dark);margin-bottom:5px;font-family:var(--serif);}
+        .rev-item p{font-size:0.88rem;font-weight:300;line-height:1.6;color:var(--text-mid);font-family:var(--serif);}
 
         /* ── 11. FOUNDER ── */
-        .founder-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start;}
-        .founder-img{border-radius:12px;overflow:hidden;min-height:460px;display:flex;align-items:center;justify-content:center;}
+        .founder-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:start;}
+        .founder-img{border-radius:12px;overflow:hidden;min-height:560px;}
         .founder-img img{width:100%;height:100%;object-fit:cover;display:block;}
-        .ft-name{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text-dark);margin-bottom:4px;}
-        .ft-sub{font-size:0.95rem;font-weight:300;color:var(--text-light);margin-bottom:22px;display:block;}
+        .ft-name{font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:300;color:var(--text-dark);margin-bottom:8px;font-family:var(--serif);}
+        .ft-sub{font-size:0.72rem;font-weight:400;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-mid);display:block;margin-bottom:22px;font-family:var(--serif);}
         .founder-bullets{list-style:none;margin-top:8px;}
-        .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(140,180,100,0.2);font-size:0.98rem;font-weight:300;line-height:1.65;color:var(--text-body);}
+        .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(140,180,100,0.2);font-size:0.98rem;font-weight:300;line-height:1.65;color:var(--text-body);font-family:var(--serif);}
         .founder-bullets li:last-child{border-bottom:none;}
         .founder-bullets li::before{content:'✦';color:var(--gold);font-size:0.6rem;flex-shrink:0;margin-top:6px;}
 
-        /* ── 12. ART ── */
-        .art-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-        .art-img{border-radius:12px;overflow:hidden;min-height:420px;display:flex;align-items:center;justify-content:center;}
-        .art-img img{width:100%;height:100%;object-fit:cover;display:block;}
-        .art-text h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;}
-        .art-text p{font-size:0.97rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;}
-        .art-quote{font-size:1.15rem;font-style:italic;font-weight:400;color:var(--teal);border-left:3px solid var(--gold);padding-left:18px;margin:22px 0;line-height:1.6;}
-        .art-press{font-size:0.85rem;font-weight:300;color:var(--text-light);}
+        /* ── 12. ART — text only ── */
+        .art-text h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);}
+        .art-text p{font-size:0.97rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);}
+        .art-quote{font-size:1.3rem;font-style:italic;font-weight:400;color:var(--teal);border-left:3px solid var(--gold);padding-left:18px;margin:22px 0;line-height:1.6;font-family:var(--serif);}
+        .art-press{font-size:0.85rem;font-weight:300;color:var(--text-light);font-family:var(--serif);}
 
         /* ── 13. CTA ── */
         .cta-card{background:var(--card-cream);border-radius:18px;max-width:900px;margin:0 auto;padding:80px 60px;text-align:center;box-shadow:0 4px 40px rgba(30,60,10,0.18);position:relative;overflow:hidden;}
         .cta-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.13;}
         .cta-inner{position:relative;z-index:1;}
-        .cta-logo{width:120px;height:120px;object-fit:contain;filter:grayscale(100%) contrast(1.1) brightness(0.8);margin:0 auto 32px;display:block;}
-        .cta-card h2{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--text-dark);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:18px;}
-        .cta-card p{font-size:1.1rem;font-weight:300;color:var(--text-mid);margin-bottom:44px;line-height:1.7;}
+        .cta-logo{width:160px;height:160px;object-fit:contain;filter:grayscale(100%) contrast(1.1) brightness(0.8);margin:0 auto 32px;display:block;}
+        .cta-card h2{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--text-dark);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:18px;font-family:var(--serif);}
+        .cta-card p{font-size:1.1rem;font-weight:300;color:var(--text-mid);margin-bottom:44px;line-height:1.7;font-family:var(--serif);}
         .cta-btn{display:inline-block;padding:16px 48px;border:1.5px solid var(--teal);color:var(--teal);font-family:var(--serif);font-size:0.85rem;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;background:transparent;cursor:pointer;border-radius:2px;}
         .cta-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px);box-shadow:0 6px 24px rgba(40,80,30,0.25);}
 
         /* ── RESPONSIVE ── */
         @media(max-width:768px){
-          .makers-split,.setting-split,.revenue-split,.phase2-inner,.art-inner,.founder-inner{grid-template-columns:1fr;}
-          .makers-img-col,.setting-img-col,.revenue-img-col{border-radius:18px 18px 0 0;min-height:260px;}
+          .makers-split,.setting2-split,.revenue-split,.phase2-inner,.founder-inner{grid-template-columns:1fr;}
+          .makers-img-col,.setting2-img-col,.revenue-img-col{border-radius:18px 18px 0 0;min-height:260px;}
           .lab-grid,.ritual-grid,.makers-grid{grid-template-columns:1fr;}
-          #hero{flex-direction:column;gap:32px;}
-          .hero-right{flex:none;}
-          .hero-right img{width:240px;height:240px;}
+          .hero-content{padding:48px 32px;}
+          .setting1-content{padding:32px;}
           .card{padding:32px 24px;}
           nav{padding:14px 20px;}
           .nav-links{display:none;}
@@ -268,16 +283,17 @@ export default function App() {
         </div>
       </nav>
 
-      <div className="page" style={{paddingTop:'100px'}}>
+      <div className="page" style={{paddingTop:'80px'}}>
 
         {/* ══ 1. HERO ══ */}
-        <section id="hero">
-          <div className="hero-left">
-            <h1 className="reveal">Unicorn<br/>Alliance</h1>
-            <p className="hero-sub reveal d2">Unicorns are rare. They are magical. Their horn purifies water. When they show up — expect miracles.</p>
-          </div>
-          <div className="hero-right reveal d3">
-            <img src="/unicorn-assets/logo.svg" alt="Unicorn Alliance crest" />
+        <section style={{padding:'0 40px 20px'}}>
+          <div className="hero-card reveal">
+            <img className="hero-bg" src="/unicorn-assets/hero.jpg" alt="" aria-hidden="true" />
+            <div className="hero-overlay" />
+            <div className="hero-content">
+              <h1>Unicorn<br/>Alliance</h1>
+              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up — expect miracles.</p>
+            </div>
           </div>
         </section>
 
@@ -285,13 +301,10 @@ export default function App() {
         <section id="who" style={{padding:'0 40px'}}>
           <div className="card card-white reveal">
             <div className="who-inner">
-              <div className="who-logo" style={{flex:'0 0 180px'}}>
-                <img src="/unicorn-assets/logo.svg" alt="Unicorn Alliance logo" />
-              </div>
-              <div className="who-text">
-                <h2>Who We Are</h2>
-                <div className="divider" />
-                <p style={{marginTop:'18px'}}>UNICORN ALLIANCE is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives, that empowers and heals — not only each other but post treatment young adults with challenges.</p>
+              <img className="who-logo reveal d1" src="/unicorn-assets/logo.svg" alt="Unicorn Alliance" />
+              <p className="who-tagline reveal d2">Makers Make Miracles</p>
+              <div className="who-text reveal d3">
+                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives, that empowers and heals — not only each other but post treatment young adults with challenges.</p>
               </div>
             </div>
           </div>
@@ -309,47 +322,57 @@ export default function App() {
                 <h2 className="reveal d1">The Makers</h2>
                 <p className="intro-p reveal d2">Unicorn welcomes poets, painters, landscapers, builders, composers, scientists and entrepreneurs — anyone passionate about:</p>
                 <div className="makers-grid">
-                  <div className="maker-card reveal d2"><h3>Life Inside a Château</h3><p>Immersed in the French countryside, living and creating within a historic monument of extraordinary beauty.</p></div>
-                  <div className="maker-card reveal d3"><h3>Daily Collaboration</h3><p>A diet of creative exchange with talented, passionate peers who push each other toward their highest potential.</p></div>
-                  <div className="maker-card reveal d4"><h3>Crafting Culture</h3><p>Building environments and shared rituals that shift consciousness and elevate the human experience.</p></div>
-                  <div className="maker-card reveal d5"><h3>Art Meets Healing</h3><p>Carving new pathways between creative expression and healing, celebrating modalities outside the medical model.</p></div>
+                  {[
+                    {h:'Life Inside a Château',p:'Immersed in the French countryside, living and creating within a historic monument of extraordinary beauty.'},
+                    {h:'Daily Collaboration',p:'A diet of creative exchange with talented, passionate peers who push each other toward their highest potential.'},
+                    {h:'Crafting Culture',p:'Building environments and shared rituals that shift consciousness and elevate the human experience.'},
+                    {h:'Art Meets Healing',p:'Carving new pathways between creative expression and healing, celebrating modalities outside the medical model.'},
+                  ].map((c,i)=>(
+                    <div key={i} className={`maker-card reveal d${i+2}`}>
+                      <h3>{c.h}</h3><p>{c.p}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ══ 4. THE SETTING ══ */}
+        {/* ══ 4. SETTING 1 — full bleed ══ */}
         <section id="setting" style={{padding:'0 40px'}}>
-          <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
-            <div className="setting-split">
-              <div className="setting-img-col">
-                <img src="/unicorn-assets/setting1.jpg" alt="The Château" />
-              </div>
-              <div className="setting-content">
-                <span className="label">The Setting</span>
-                <h2 className="reveal d1">The Setting</h2>
-                <p className="setting-sub reveal d2">A 16th-century château in the heart of the Loire Valley.</p>
-                <p className="setting-desc reveal d3">Unicorn Alliance lives in a 16th-century château in the heart of the Loire Valley. This historic monument has been in the same family for 9 generations, retaining many of its original components.</p>
-                <div className="setting-features">
-                  <div className="sf reveal d2"><h3>Marquetry &amp; Fireplaces</h3><p>Original craftsmanship preserved across nine generations of family stewardship.</p></div>
-                  <div className="sf reveal d3"><h3>Orangerie</h3><p>A grand orangerie — perfect for a restaurant or performance piece.</p></div>
-                  <div className="sf reveal d4"><h3>Hidden Stairways</h3><p>Secret passages and architectural mysteries woven into the château's bones.</p></div>
-                  <div className="sf reveal d5"><h3>Stables, Atelier &amp; Glacier</h3><p>A medieval icehouse and historic outbuildings ripe for transformation into studios, sanctuaries, and living spaces.</p></div>
-                  <div className="sf reveal d6"><h3>Pigeonnier &amp; 17th-Century Stove</h3><p>A giant pigeonnier and a remarkable 17th-century stove — extraordinary relics of another age.</p></div>
-                </div>
-              </div>
+          <div className="setting1-card reveal">
+            <img className="setting1-bg" src="/unicorn-assets/setting1.jpg" alt="The Château" />
+            <div className="setting1-overlay" />
+            <div className="setting1-content">
+              <span className="s1-label">The Setting</span>
+              <h2>The Setting</h2>
+              <p>A 16th-century château in the heart of the Loire Valley. Unicorn Alliance lives in this historic monument, held by the same family for 9 generations, retaining many of its original components.</p>
             </div>
           </div>
         </section>
 
-        {/* ══ 5. PHOTO / QUOTE CARD ══ */}
-        <section style={{padding:'0 40px'}} className="reveal">
-          <div className="photo-card" style={{minHeight:'380px'}}>
-            <img className="ph-img" src="/unicorn-assets/quote.jpg" alt="Château" />
-            <div className="ph-overlay-bg" />
-            <div className="ph-overlay">
-              <div className="monument-text">A 16th-century monument.<br/><em>Nine generations. One family.</em></div>
+        {/* ══ 5. SETTING 2 — features ══ */}
+        <section style={{padding:'0 40px'}}>
+          <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
+            <div className="setting2-split">
+              <div className="setting2-img-col">
+                <img src="/unicorn-assets/setting2.jpg" alt="Château details" />
+              </div>
+              <div className="setting2-content">
+                <div className="setting-features">
+                  {[
+                    {h:'Marquetry & Fireplaces',p:'Original craftsmanship preserved across nine generations of family stewardship.'},
+                    {h:'Orangerie',p:'A grand orangerie — perfect for a restaurant or performance piece.'},
+                    {h:'Hidden Stairways',p:"Secret passages and architectural mysteries woven into the château's bones."},
+                    {h:'Stables, Atelier & Glacier',p:'A medieval icehouse and historic outbuildings ripe for transformation into studios, sanctuaries, and living spaces.'},
+                    {h:'Pigeonnier & 17th-Century Stove',p:'A giant pigeonnier and a remarkable 17th-century stove — extraordinary relics of another age.'},
+                  ].map((f,i)=>(
+                    <div key={i} className={`sf reveal d${i+1}`}>
+                      <h3>{f.h}</h3><p>{f.p}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -376,10 +399,10 @@ export default function App() {
           </div>
         </section>
 
-        {/* ══ 7. MONUMENT PHOTO ══ */}
+        {/* ══ 7. QUOTE PHOTO CARD ══ */}
         <section style={{padding:'0 40px'}} className="reveal">
-          <div className="photo-card" style={{minHeight:'420px'}}>
-            <img className="ph-img" src="/unicorn-assets/setting2.jpg" alt="Château monument" />
+          <div className="photo-card" style={{minHeight:'380px'}}>
+            <img className="ph-img" src="/unicorn-assets/quote.jpg" alt="Château" />
             <div className="ph-overlay-bg" />
             <div className="ph-overlay">
               <div className="monument-text">A 16th-century monument.<br/><em>Nine generations. One family.</em></div>
@@ -396,17 +419,23 @@ export default function App() {
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity, and collective care.</p>
             </div>
             <div className="ritual-grid">
-              <div className="ritual-item reveal d2"><h3>Sunrise &amp; sunset meditations</h3><p>Bookending each day with stillness and intention, anchoring the community in rhythm and light.</p></div>
-              <div className="ritual-item reveal d3"><h3>Communal silence</h3><p>Moments of shared silence announced by a tolling bell — a pause that reconnects the collective.</p></div>
-              <div className="ritual-item reveal d2"><h3>Grounding in the garden</h3><p>Sing and tone while caring for plants — embodied presence through earth and voice.</p></div>
-              <div className="ritual-item reveal d3"><h3>Morning swims in the moat</h3><p>A daily ritual of immersion, awakening the body and spirit in the château's ancient waters.</p></div>
-              <div className="ritual-item reveal d2"><h3>Rewilding through animal care</h3><p>Tending to animals as a practice of presence, empathy, and reconnection with the natural world.</p></div>
-              <div className="ritual-item reveal d3"><h3>Shared farm-to-table meals</h3><p>Farm to table and organic, prepared by Unicorn's private chef — nourishment as ceremony and community.</p></div>
+              {[
+                {h:'Sunrise & sunset meditations',p:'Bookending each day with stillness and intention, anchoring the community in rhythm and light.',d:'d2'},
+                {h:'Communal silence',p:'Moments of shared silence announced by a tolling bell — a pause that reconnects the collective.',d:'d3'},
+                {h:'Grounding in the garden',p:'Sing and tone while caring for plants — embodied presence through earth and voice.',d:'d2'},
+                {h:'Morning swims in the moat',p:"A daily ritual of immersion, awakening the body and spirit in the château's ancient waters.",d:'d3'},
+                {h:'Rewilding through animal care',p:'Tending to animals as a practice of presence, empathy, and reconnection with the natural world.',d:'d2'},
+                {h:'Shared farm-to-table meals',p:"Farm to table and organic, prepared by Unicorn's private chef — nourishment as ceremony and community.",d:'d3'},
+              ].map((r,i)=>(
+                <div key={i} className={`ritual-item reveal ${r.d}`}>
+                  <h3>{r.h}</h3><p>{r.p}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ══ 9. PHASE II — INVITING IN THE VULNERABLE ══ */}
+        {/* ══ 9. PHASE II ══ */}
         <section id="phase2" style={{padding:'0 40px'}}>
           <div className="card card-white reveal">
             <span className="label">Inviting in the Vulnerable</span>
@@ -438,11 +467,17 @@ export default function App() {
                 <span className="label">Sustainability</span>
                 <h2>Revenue Streams</h2>
                 <div className="rev-list">
-                  <div className="rev-item reveal d2"><h3>Product sales</h3><p>Artisan goods, publications, and creative works produced by the maker community.</p></div>
-                  <div className="rev-item reveal d3"><h3>Experiential programs</h3><p>Immersive retreats, workshops, and healing programs hosted at the château.</p></div>
-                  <div className="rev-item reveal d4"><h3>Strategic partnerships</h3><p>Collaborations with aligned organizations in art, wellness, and education.</p></div>
-                  <div className="rev-item reveal d5"><h3>Leasing land to farmers</h3><p>Agricultural partnerships that activate the château's land and support local food systems.</p></div>
-                  <div className="rev-item reveal d6"><h3>Short &amp; long-term rentals</h3><p>Flexible timeshare leasing of rooms and outbuildings to makers and visiting creatives.</p></div>
+                  {[
+                    {h:'Product sales',p:'Artisan goods, publications, and creative works produced by the maker community.'},
+                    {h:'Experiential programs',p:'Immersive retreats, workshops, and healing programs hosted at the château.'},
+                    {h:'Strategic partnerships',p:'Collaborations with aligned organizations in art, wellness, and education.'},
+                    {h:'Leasing land to farmers',p:"Agricultural partnerships that activate the château's land and support local food systems."},
+                    {h:'Short & long-term rentals',p:'Flexible timeshare leasing of rooms and outbuildings to makers and visiting creatives.'},
+                  ].map((r,i)=>(
+                    <div key={i} className={`rev-item reveal d${i+2}`}>
+                      <h3>{r.h}</h3><p>{r.p}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -459,7 +494,7 @@ export default function App() {
               </div>
               <div className="founder-text">
                 <p className="ft-name reveal d1">Meghan Boody</p>
-                <span className="ft-sub reveal d2">Multimedia artist, pioneer, and visionary. Passionate about the process of inner change.</span>
+                <span className="ft-sub reveal d2">Multimedia Artist · Pioneer · Visionary</span>
                 <div className="divider" />
                 <ul className="founder-bullets">
                   <li className="reveal d2">Apprenticed with renowned photographer Hans Namuth</li>
@@ -473,21 +508,16 @@ export default function App() {
           </div>
         </section>
 
-        {/* ══ 12. MEGHAN'S ART ══ */}
+        {/* ══ 12. MEGHAN'S ART — text only ══ */}
         <section id="art" style={{padding:'0 40px'}}>
           <div className="card card-white reveal">
             <span className="label">The Work</span>
-            <div className="art-inner">
-              <div className="art-img">
-                <img src="/unicorn-assets/hero.jpg" alt="Meghan Boody artwork" />
-              </div>
-              <div className="art-text">
-                <h2 className="reveal d1">Meghan's Art</h2>
-                <p className="reveal d2">Boody's fantastical photographs and interactive sculpture tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that questions our relationship with the beyond.</p>
-                <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
-                <blockquote className="art-quote reveal d4">"The beauty of the past informs innovation of the present."</blockquote>
-                <p className="art-press reveal d5">Boody has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
-              </div>
+            <div className="art-text">
+              <h2 className="reveal d1">Meghan's Art</h2>
+              <p className="reveal d2">Boody's fantastical photographs and interactive sculpture tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that questions our relationship with the beyond.</p>
+              <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
+              <blockquote className="art-quote reveal d4">"The beauty of the past informs innovation of the present."</blockquote>
+              <p className="art-press reveal d5">Boody has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
             </div>
           </div>
         </section>
