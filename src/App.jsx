@@ -399,30 +399,30 @@ export default function App() {
           box-shadow:0 4px 40px rgba(30,60,10,0.25);
           position:relative;
         }
-        .cta-img{width:100%;height:600px;overflow:hidden;display:block;}
+        .cta-img{width:100%;height:720px;overflow:hidden;display:block;}
         .cta-img img{width:100%;height:100%;object-fit:cover;display:block;}
         .cta-banner{
           background:#2a4e2a;
-          padding:44px 60px;
+          padding:28px 60px;
           text-align:center;
         }
         .cta-banner h2{
-          font-size:clamp(2rem,4vw,3.5rem);
+          font-size:clamp(1.2rem,2.2vw,1.9rem);
           font-weight:300;color:#fff;
           letter-spacing:0.1em;text-transform:uppercase;
-          margin-bottom:14px;font-family:var(--serif);
+          margin-bottom:8px;font-family:var(--serif);
         }
         .cta-banner p{
-          font-size:clamp(1rem,1.8vw,1.35rem);
-          font-weight:300;color:rgba(255,255,255,0.82);
-          margin-bottom:36px;line-height:1.6;
+          font-size:clamp(0.85rem,1.3vw,1rem);
+          font-weight:300;color:rgba(255,255,255,0.78);
+          margin-bottom:20px;line-height:1.5;
           font-family:var(--serif);
         }
         .cta-btn{
-          display:inline-block;padding:16px 52px;
-          border:1.5px solid rgba(255,255,255,0.7);
+          display:inline-block;padding:10px 36px;
+          border:1px solid rgba(255,255,255,0.6);
           color:#fff;font-family:var(--serif);
-          font-size:0.88rem;letter-spacing:0.22em;
+          font-size:0.78rem;letter-spacing:0.22em;
           text-transform:uppercase;text-decoration:none;
           transition:all 0.3s;background:transparent;
           cursor:pointer;border-radius:2px;
@@ -760,7 +760,7 @@ export default function App() {
               <h2>Are You a Unicorn?</h2>
               <p>Discover our unique onboarding process</p>
               <a className="cta-btn" href="mailto:mboody@lookingglasslabs.com">Make Magic Now</a>
-              <p style={{marginTop:'28px',fontSize:'0.72rem',letterSpacing:'0.12em',color:'rgba(255,255,255,0.45)',fontFamily:'var(--serif)',fontWeight:300}}>All images and interiors in this deck copyright Meghan Boody</p>
+              <p style={{marginTop:'20px',fontSize:'0.68rem',letterSpacing:'0.1em',color:'rgba(255,255,255,0.38)',fontFamily:'var(--serif)',fontWeight:300}}>© All images and interiors copyright Meghan Boody</p>
             </div>
           </div>
         </section>
