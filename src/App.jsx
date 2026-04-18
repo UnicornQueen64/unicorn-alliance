@@ -178,7 +178,7 @@ export default function App() {
         .makers-img-top img{width:100%;height:100%;object-fit:cover;display:block;}
         .makers-text-bottom{padding:44px 52px;}
         .makers-text-bottom h2{
-          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;
+          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
           color:var(--text-dark);margin-bottom:10px;
           font-family:var(--serif);text-align:center;
         }
@@ -217,7 +217,7 @@ export default function App() {
           text-align:center;
         }
         .setting1-text h2{
-          font-size:clamp(2rem,3.5vw,3rem);font-weight:300;
+          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
           color:var(--text-dark);letter-spacing:0.08em;
           margin-bottom:16px;font-family:var(--serif);
         }
@@ -242,7 +242,7 @@ export default function App() {
            6. LABORATORY
         ══════════════════════════════════════ */
         .lab-header{text-align:center;margin-bottom:40px;}
-        .lab-header h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .lab-header h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
         .lab-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:680px;margin:0 auto;font-family:var(--serif);text-align:left;}
         .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
         .lab-item{background:rgba(255,255,255,0.55);border:1px solid rgba(80,130,60,0.25);border-radius:12px;padding:28px 24px;transition:transform 0.25s,background 0.25s;}
@@ -251,7 +251,7 @@ export default function App() {
         .lab-item p{font-size:0.9rem;font-weight:300;line-height:1.65;color:var(--text-mid);font-family:var(--serif);text-align:left;}
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(80,130,60,0.2);border-radius:12px;padding:40px 44px;}
         .no-place .np-label{
-          font-size:clamp(1.5rem,2.6vw,2.4rem);
+          font-size:clamp(1.2rem,2vw,1.8rem);
           letter-spacing:0.04em;
           color:var(--text-dark);
           display:block;margin-bottom:10px;
@@ -277,7 +277,7 @@ export default function App() {
         .quote-img img{width:100%;height:100%;object-fit:cover;display:block;}
         .quote-text{padding:36px 60px 40px;text-align:center;}
         .quote-title{
-          font-size:clamp(1.4rem,2.4vw,2rem);
+          font-size:clamp(1.1rem,1.8vw,1.5rem);
           font-weight:300;color:var(--text-dark);
           font-family:var(--serif);margin-bottom:14px;
           letter-spacing:0.04em;line-height:1.3;
@@ -300,7 +300,7 @@ export default function App() {
           display:block;margin-bottom:6px;
         }
         .phase-header h2{
-          font-size:clamp(2.2rem,3.8vw,3.4rem);
+          font-size:clamp(1.2rem,2vw,1.8rem);
           font-weight:300;color:var(--text-dark);
           margin-bottom:14px;font-family:var(--serif);
         }
@@ -318,7 +318,7 @@ export default function App() {
         .phase2-img{overflow:hidden;min-height:480px;}
         .phase2-img img{width:100%;height:100%;object-fit:cover;display:block;}
         .phase2-text{padding:44px 44px;display:flex;flex-direction:column;justify-content:center;}
-        .phase2-text h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .phase2-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
         .phase2-text p{font-size:0.98rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
         .phase2-highlight{
           background:rgba(200,230,180,0.4);
@@ -335,7 +335,7 @@ export default function App() {
         .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;}
         .revenue-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .revenue-content{padding:52px 48px;}
-        .revenue-content h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);text-align:center;}
+        .revenue-content h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);text-align:center;}
         .rev-list{display:flex;flex-direction:column;gap:12px;}
         .rev-item{background:rgba(255,255,255,0.55);border:1px solid rgba(80,130,60,0.2);border-radius:10px;padding:20px 22px;transition:transform 0.25s,background 0.25s;}
         .rev-item:hover{transform:translateX(4px);background:rgba(255,255,255,0.8);}
@@ -346,7 +346,7 @@ export default function App() {
            11. FOUNDER — full width photo, text below
         ══════════════════════════════════════ */
         .founder-section-title{
-          font-size:clamp(1.5rem,2.6vw,2.2rem);
+          font-size:clamp(1.1rem,2vw,1.7rem);
           font-weight:300;color:var(--text-dark);
           letter-spacing:0.1em;text-transform:uppercase;
           font-family:var(--serif);
@@ -358,7 +358,7 @@ export default function App() {
           width:100%;height:560px;margin-bottom:28px;
         }
         .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
-        .ft-name{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
+        .ft-name{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
         .ft-sub{font-size:0.7rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);display:block;margin-top:4px;margin-bottom:24px;font-family:var(--serif);line-height:1.6;}
         .founder-divider{display:none;}
         .founder-bullets{list-style:none;margin-top:8px;}
@@ -369,7 +369,7 @@ export default function App() {
         /* ══════════════════════════════════════
            12. MEGHAN'S ART
         ══════════════════════════════════════ */
-        .art-text h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .art-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
         .art-text p{font-size:0.97rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
         .art-press{font-size:0.85rem;font-weight:300;color:var(--text-light);font-family:var(--serif);text-align:left;}
 
@@ -383,7 +383,7 @@ export default function App() {
           box-shadow:0 4px 40px rgba(30,60,10,0.18);
         }
         .art-quote-text{
-          font-size:clamp(1.4rem,2.5vw,2rem);
+          font-size:clamp(1rem,1.8vw,1.4rem);
           font-style:italic;font-weight:300;
           color:var(--teal);line-height:1.6;
           font-family:var(--serif);
@@ -407,7 +407,7 @@ export default function App() {
           text-align:center;
         }
         .cta-banner h2{
-          font-size:clamp(1.2rem,2.2vw,1.9rem);
+          font-size:clamp(1.1rem,1.8vw,1.6rem);
           font-weight:300;color:#fff;
           letter-spacing:0.1em;text-transform:uppercase;
           margin-bottom:8px;font-family:var(--serif);
@@ -486,8 +486,11 @@ export default function App() {
           .art-quote-card{padding:40px 28px;}
 
           /* CTA */
-          .cta-img{height:300px;}
-          .cta-banner{padding:36px 28px;}
+          .cta-img{height:520px;}
+          .cta-banner{padding:20px 24px;}
+          .cta-banner h2{font-size:1rem;}
+          .cta-banner p{font-size:0.8rem;margin-bottom:14px;}
+          .cta-btn{padding:8px 24px;font-size:0.72rem;}
 
           /* Global section padding */
           section{padding-left:16px !important;padding-right:16px !important;}
