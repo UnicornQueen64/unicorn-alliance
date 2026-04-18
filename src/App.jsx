@@ -97,12 +97,15 @@ export default function App() {
           border-radius:18px;max-width:900px;margin:0 auto 20px;
           overflow:hidden;
           display:flex;flex-direction:column;
+          gap:0;
           box-shadow:0 4px 40px rgba(30,60,10,0.25);
           background:var(--card-cream);
         }
         .hero-text-block{
           padding:32px 60px 36px;
           background:var(--card-cream);
+          flex-shrink:0;
+          margin:0;
         }
         .hero-text-block h1{
           font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:300;
@@ -122,9 +125,12 @@ export default function App() {
           flex:1;
           min-height:520px;
           overflow:hidden;
+          display:block;
+          font-size:0;
+          line-height:0;
         }
         .hero-img-block img{
-          width:100%;height:100%;object-fit:cover;display:block;
+          width:100%;height:100%;object-fit:cover;display:block;vertical-align:bottom;
         }
 
         /* ══════════════════════════════════════
@@ -172,15 +178,15 @@ export default function App() {
         /* ══════════════════════════════════════
            3. MAKERS — stacked (image top, text bottom)
         ══════════════════════════════════════ */
-        .makers-stack{display:flex;flex-direction:column;gap:0;}
+        .makers-stack{display:flex;flex-direction:column;gap:0;margin:0;padding:0;}
         .makers-img-top{
           width:100%;overflow:hidden;
           border-radius:18px 18px 0 0;
-          display:block;
-          line-height:0;
-          font-size:0;
+          flex-shrink:0;
+          margin:0;padding:0;
+          font-size:0;line-height:0;
         }
-        .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;vertical-align:bottom;}
+        .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;vertical-align:bottom;margin:0;padding:0;}
         .makers-text-bottom{padding:44px 52px;background:var(--card-white);}
         .makers-text-bottom h2{
           font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
