@@ -105,7 +105,7 @@ export default function App() {
           background:var(--card-cream);
         }
         .hero-text-block h1{
-          font-size:clamp(1.8rem,3vw,3rem);font-weight:300;
+          font-size:clamp(1.4rem,2.2vw,2.2rem);font-weight:300;
           letter-spacing:0.12em;line-height:1.1;
           color:var(--text-dark);text-transform:uppercase;
           margin-bottom:22px;
@@ -134,7 +134,7 @@ export default function App() {
           align-items:center;text-align:center;gap:0;
         }
         .who-section-title{
-          font-size:clamp(1.4rem,2.5vw,2.2rem);
+          font-size:clamp(1.1rem,2vw,1.7rem);
           letter-spacing:0.18em;
           text-transform:uppercase;
           color:var(--text-dark);
@@ -251,7 +251,7 @@ export default function App() {
         .lab-item p{font-size:0.9rem;font-weight:300;line-height:1.65;color:var(--text-mid);font-family:var(--serif);text-align:left;}
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(80,130,60,0.2);border-radius:12px;padding:40px 44px;}
         .no-place .np-label{
-          font-size:clamp(2rem,3.5vw,3.2rem);
+          font-size:clamp(1.5rem,2.6vw,2.4rem);
           letter-spacing:0.04em;
           color:var(--text-dark);
           display:block;margin-bottom:10px;
@@ -275,17 +275,18 @@ export default function App() {
         }
         .quote-img{width:100%;height:480px;overflow:hidden;}
         .quote-img img{width:100%;height:100%;object-fit:cover;display:block;}
-        .quote-text{padding:36px 60px;text-align:center;}
+        .quote-text{padding:36px 60px 40px;text-align:center;}
         .quote-title{
-          font-size:clamp(1.8rem,3.2vw,2.8rem);
+          font-size:clamp(1.4rem,2.4vw,2rem);
           font-weight:300;color:var(--text-dark);
-          font-family:var(--serif);margin-bottom:10px;
-          letter-spacing:0.04em;
+          font-family:var(--serif);margin-bottom:14px;
+          letter-spacing:0.04em;line-height:1.3;
+          display:block;
         }
         .quote-sub{
-          font-size:1rem;font-weight:300;
+          font-size:0.88rem;font-weight:300;
           color:var(--text-mid);font-family:var(--serif);
-          letter-spacing:0.04em;
+          letter-spacing:0.08em;display:block;
         }
 
         /* ══════════════════════════════════════
@@ -345,7 +346,7 @@ export default function App() {
            11. FOUNDER — full width photo, text below
         ══════════════════════════════════════ */
         .founder-section-title{
-          font-size:clamp(2rem,3.5vw,3rem);
+          font-size:clamp(1.5rem,2.6vw,2.2rem);
           font-weight:300;color:var(--text-dark);
           letter-spacing:0.1em;text-transform:uppercase;
           font-family:var(--serif);
@@ -354,12 +355,12 @@ export default function App() {
         }
         .founder-img{
           border-radius:12px;overflow:hidden;
-          width:100%;height:560px;margin-bottom:36px;
+          width:100%;height:560px;margin-bottom:28px;
         }
         .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
-        .ft-name{font-size:clamp(2.2rem,3.5vw,3rem);font-weight:300;color:var(--text-dark);margin-bottom:8px;font-family:var(--serif);display:block;}
-        .ft-sub{font-size:0.7rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:0;font-family:var(--serif);line-height:1.6;}
-        .founder-divider{width:60px;height:1px;background:var(--teal-accent);margin:24px 0;}
+        .ft-name{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
+        .ft-sub{font-size:0.7rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);display:block;margin-top:4px;margin-bottom:24px;font-family:var(--serif);line-height:1.6;}
+        .founder-divider{display:none;}
         .founder-bullets{list-style:none;margin-top:8px;}
         .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(80,130,60,0.15);font-size:0.98rem;font-weight:300;line-height:1.65;color:var(--text-body);font-family:var(--serif);text-align:left;}
         .founder-bullets li:last-child{border-bottom:none;}
@@ -398,7 +399,7 @@ export default function App() {
           box-shadow:0 4px 40px rgba(30,60,10,0.25);
           position:relative;
         }
-        .cta-img{width:100%;height:480px;overflow:hidden;display:block;}
+        .cta-img{width:100%;height:600px;overflow:hidden;display:block;}
         .cta-img img{width:100%;height:100%;object-fit:cover;display:block;}
         .cta-banner{
           background:#2a4e2a;
@@ -725,7 +726,7 @@ export default function App() {
               <li className="reveal d4">Pioneer of Photoshop in fine art photography since the early '90s</li>
               <li className="reveal d5">Work held in The Whitney Museum of American Art, Herbert F. Johnson Museum at Cornell, and MONA in Tasmania</li>
               <li className="reveal d6">Monograph published by Kerber Verlag, 2016</li>
-              <li className="reveal d6">Founder and co-leader of Gang of Girls — a transformative think tank for women in creative fields — for 15 years</li>
+              <li className="reveal d6">Founder and co-leader of Gang of Girls, a transformative think tank for women in creative fields, for 15 years</li>
             </ul>
           </div>
         </section>
@@ -759,6 +760,7 @@ export default function App() {
               <h2>Are You a Unicorn?</h2>
               <p>Discover our unique onboarding process</p>
               <a className="cta-btn" href="mailto:mboody@lookingglasslabs.com">Make Magic Now</a>
+              <p style={{marginTop:'28px',fontSize:'0.72rem',letterSpacing:'0.12em',color:'rgba(255,255,255,0.45)',fontFamily:'var(--serif)',fontWeight:300}}>All images and interiors in this deck copyright Meghan Boody</p>
             </div>
           </div>
         </section>
