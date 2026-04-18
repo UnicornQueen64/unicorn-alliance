@@ -236,13 +236,24 @@ export default function App() {
 
         /* No Place Like Home — heading large, body smaller */
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(140,180,100,0.25);border-radius:12px;padding:40px 44px;}
-        .no-place .np-label{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal-label);display:block;margin-bottom:16px;font-family:var(--serif);}
-        .no-place h3{
+        .no-place .np-label{
           font-size:clamp(2.6rem,4.2vw,3.8rem);
-          font-weight:300;color:var(--text-dark);
-          margin-bottom:20px;letter-spacing:0.02em;
+          letter-spacing:0.06em;
+          text-transform:uppercase;
+          color:var(--text-dark);
+          display:block;
+          margin-bottom:16px;
           font-family:var(--serif);
+          font-weight:300;
           line-height:1.15;
+        }
+        .no-place h3{
+          font-size:0.95rem;
+          font-weight:300;
+          color:var(--text-mid);
+          margin-bottom:16px;
+          font-family:var(--serif);
+          line-height:1.6;
         }
         .no-place p{font-size:0.85rem;font-weight:300;line-height:1.9;color:var(--text-mid);font-family:var(--serif);}
 
@@ -288,21 +299,21 @@ export default function App() {
 
         /* ── 11. FOUNDER ── */
         .founder-inner{
-          display:grid;
-          grid-template-columns:1.2fr 1fr;
-          gap:52px;
-          align-items:start;
+          display:flex;
+          flex-direction:column;
+          gap:40px;
         }
         .founder-img{
           border-radius:12px;overflow:hidden;
-          min-height:780px;
+          width:100%;
+          height:560px;
         }
-        .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
-        .founder-text-block{padding-top:8px;}
+        .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+        .founder-text-block{padding-top:4px;}
         .ft-name{
           font-size:clamp(2.4rem,3.8vw,3.4rem);
           font-weight:300;color:var(--text-dark);
-          margin-bottom:12px;
+          margin-bottom:10px;
           font-family:var(--serif);
           line-height:1.1;
           display:block;
