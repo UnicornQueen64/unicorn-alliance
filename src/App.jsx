@@ -746,7 +746,7 @@ export default function App() {
           <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="art-split">
               <div className="art-img-col">
-                <img src="/unicorn-assets/megansart.jpg" alt="Meghan Boody artwork" />
+                <img src="/unicorn-assets/meghansart.jpg" alt="Meghan Boody artwork" />
               </div>
               <div className="art-text-col">
                 <h2 className="reveal d1">Meghan's Art</h2>
