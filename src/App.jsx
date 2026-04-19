@@ -18,13 +18,13 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#2a5c38;
-          --teal-label:#2a5c38;
-          --teal-accent:#2a5c38;
-          --text-dark:#162812;
-          --text-body:#1e3820;
-          --text-mid:#2e4e30;
-          --text-light:#4a7a54;
+          --teal:#1a5c2a;
+          --teal-label:#1a5c2a;
+          --teal-accent:#1a5c2a;
+          --text-dark:#0e2410;
+          --text-body:#143016;
+          --text-mid:#1e4020;
+          --text-light:#2e6030;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;}
@@ -51,20 +51,8 @@ export default function App() {
 
         .page{position:relative;z-index:1;padding:0;}
 
-        /* ── NAV ── */
-        nav{
-          position:fixed;top:0;left:0;right:0;z-index:100;
-          display:flex;align-items:center;justify-content:space-between;
-          padding:18px 40px;
-          background:rgba(200,220,170,0.2);
-          backdrop-filter:blur(16px);
-          -webkit-backdrop-filter:blur(16px);
-          border-bottom:1px solid rgba(255,255,255,0.12);
-        }
-        .nav-brand{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.92);font-weight:400;font-family:var(--serif);}
-        .nav-links{display:flex;gap:36px;}
-        .nav-links a{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.78);text-decoration:none;transition:color 0.2s;font-family:var(--serif);}
-        .nav-links a:hover{color:#fff;}
+        /* ── NAV — hidden ── */
+        nav{display:none;}
 
         /* ── CARD BASE ── */
         .card{
@@ -107,7 +95,7 @@ export default function App() {
           margin:0;
         }
         .hero-text-block h1{
-          font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:500;
+          font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:600;
           letter-spacing:0.12em;line-height:1.1;
           color:var(--text-dark);text-transform:uppercase;
           margin-bottom:18px;
@@ -115,7 +103,7 @@ export default function App() {
           white-space:nowrap;
         }
         .hero-text-block .hero-sub{
-          font-size:1.05rem;font-weight:400;
+          font-size:1.05rem;font-weight:500;
           color:var(--text-body);line-height:1.4;
           font-family:var(--serif);
         }
@@ -196,10 +184,10 @@ export default function App() {
           position:relative;text-align:left;
         }
         .makers-bullets li::before{
-          content:'•';
+          content:'❦';
           position:absolute;left:0;
           color:var(--teal);
-          font-size:1rem;
+          font-size:0.85rem;
         }
 
         /* ══════════════════════════════════════
@@ -343,7 +331,7 @@ export default function App() {
         .founder-bullets{list-style:none;margin-top:8px;}
         .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(80,130,60,0.15);font-size:0.98rem;font-weight:400;line-height:1.65;color:var(--text-body);font-family:var(--serif);text-align:left;}
         .founder-bullets li:last-child{border-bottom:none;}
-        .founder-bullets li::before{content:'✦';color:var(--teal-accent);font-size:0.6rem;flex-shrink:0;margin-top:6px;}
+        .founder-bullets li::before{content:'❦';color:var(--teal-accent);font-size:0.85rem;flex-shrink:0;margin-top:4px;}
 
         /* ══════════════════════════════════════
            12. MEGHAN'S ART
@@ -382,19 +370,21 @@ export default function App() {
           width:100%;height:auto;display:block;
           vertical-align:bottom;margin:0;padding:0;
         }
-        .art-quote-text-overlay{
-          position:absolute;
-          top:0;left:0;right:0;
-          display:flex;align-items:flex-start;justify-content:center;
-          padding:28px 48px;
+        .art-quote-grey-bar{
+          background:#b8b8b0;
+          padding:28px 52px 32px;
           text-align:center;
+          font-size:1rem;
+          line-height:1;
         }
         .art-quote-text{
-          font-size:clamp(0.85rem,1.4vw,1.1rem);
-          font-style:italic;font-weight:300;
-          color:#1e3a1e;line-height:1.6;
+          font-size:clamp(1.1rem,2vw,1.6rem);
+          font-style:italic;font-weight:400;
+          color:#2a2a22;line-height:1.5;
           font-family:var(--serif);
+          display:block;
         }
+        .art-quote-text-overlay{display:none;}
 
         /* ══════════════════════════════════════
            14. CTA — full image, dark green banner at bottom
@@ -531,7 +521,7 @@ export default function App() {
         </div>
       </nav>
 
-      <div className="page" style={{paddingTop:'80px'}}>
+      <div className="page" style={{paddingTop:'20px'}}>
 
         {/* ══ 1. HERO — text top, image bottom ══ */}
         <section style={{padding:'0 40px 20px'}}>
@@ -555,7 +545,7 @@ export default function App() {
               <p className="who-tagline reveal d3">Makers Make Miracles</p>
               <div className="who-divider reveal d4" />
               <div className="who-text reveal d5">
-                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives, that empowers and heals.</p>
+                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives and empowers, healing ourselves and Planet Earth.</p>
               </div>
             </div>
           </div>
@@ -570,7 +560,7 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                <p className="reveal d2" style={{fontStyle:'italic',marginBottom:'20px',fontSize:'0.95rem',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}>Your genius flowers when it is offered in service to the whole. — Richard Rudd, founder of The Gene Keys</p>
+                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'0.95rem',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, founder of The Gene Keys</p>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for poets, painters, landscapers, builders, composers, scientists, entrepreneurs, joy activators and iconoclasts — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
@@ -593,7 +583,7 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>The Setting</h2>
-              <p>A 16th-century château in the heart of the Loire Valley — held by the same family for 9 generations.</p>
+              <p>A 17th-century château in the heart of the Loire Valley — held by the same family for 9 generations.</p>
             </div>
           </div>
         </section>
@@ -632,10 +622,10 @@ export default function App() {
               <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, and a sanctuary.</p>
             </div>
             <div className="lab-grid">
-              <div className="lab-item reveal d2"><h3>Beauty as mood enhancer</h3><p>Environments that actively shift consciousness.</p></div>
-              <div className="lab-item reveal d3"><h3>Interior design as therapeutic container</h3><p>Art installation and spatial design as instruments of healing and transformation.</p></div>
-              <div className="lab-item reveal d4"><h3>Green building practices</h3><p>Historic monument preservation as experimental field for green building practices.</p></div>
-              <div className="lab-item reveal d5"><h3>Immersive room environments</h3><p>Rooms designed with therapeutic goals ie. inner calm, inspiration, alignment with ancestors, journey to the underground.</p></div>
+              <div className="lab-item reveal d2"><h3>Beauty as Mood Enhancer</h3><p>Environments that actively shift consciousness.</p></div>
+              <div className="lab-item reveal d3"><h3>Interior Design as Therapeutic Container</h3><p>Art installation and spatial design as instruments of healing and transformation.</p></div>
+              <div className="lab-item reveal d4"><h3>Green Building Practices</h3><p>Historic monument preservation as experimental field for green building practices.</p></div>
+              <div className="lab-item reveal d5"><h3>Immersive Rooms</h3><p>Rooms designed with therapeutic goals ie. inner calm, inspiration, alignment with ancestors, journey to the underground.</p></div>
             </div>
             <div className="no-place reveal d3" style={{marginTop:'20px'}}>
               <span className="np-label">No Place Like Home</span>
@@ -662,7 +652,6 @@ export default function App() {
         <section id="phase1" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="phase-header">
-              <span className="phase-num">Phase I</span>
               <h2>Creating Culture</h2>
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity and collective care.</p>
             </div>
@@ -691,14 +680,14 @@ export default function App() {
                 <img src="/unicorn-assets/revenue.jpeg" alt="Revenue" />
               </div>
               <div className="revenue-content">
-                <span className="label">Sustainability</span>
+                <span className="label">Sustainable Opportunities</span>
                 <h2>Revenue Streams</h2>
                 <div className="rev-list">
                   {[
                     {h:'Product sales',p:'Artisan goods, publications, and creative works produced by the maker community.'},
                     {h:'Experiential programs',p:'Immersive retreats, workshops, and healing programs hosted at the château.'},
                     {h:'Strategic partnerships',p:'Collaborations with aligned organizations in art, wellness, and education.'},
-                    {h:'Leasing land to farmers',p:"Agricultural partnerships that activate the château's land and support local food systems."},
+                    {h:'Land leases to farmers',p:"Agricultural partnerships that activate the château's land and support local food systems."},
                     {h:'Short & long-term rentals',p:'Flexible timeshare leasing of rooms and outbuildings to makers and visiting creatives.'},
                   ].map((r,i)=>(
                     <div key={i} className={`rev-item reveal d${i+2}`}>
@@ -735,8 +724,8 @@ export default function App() {
         <section className="art-quote-section" style={{padding:'0 40px'}}>
           <div className="art-quote-card reveal">
             <img src="/unicorn-assets/quote2.jxl" alt="Quote" />
-            <div className="art-quote-text-overlay">
-              <p className="art-quote-text">"The beauty of the past informs innovation of the present."</p>
+            <div className="art-quote-grey-bar">
+              <p className="art-quote-text">The beauty of the past informs innovation of the present.</p>
             </div>
           </div>
         </section>
