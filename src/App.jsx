@@ -404,13 +404,13 @@ export default function App() {
         }
         .art-quote-text-overlay{
           position:absolute;
-          top:0;left:0;right:0;bottom:0;
-          display:flex;align-items:center;justify-content:center;
-          padding:40px 60px;
+          top:0;left:0;right:0;
+          display:flex;align-items:flex-start;justify-content:center;
+          padding:28px 48px;
           text-align:center;
         }
         .art-quote-text{
-          font-size:clamp(1.2rem,2.5vw,2rem);
+          font-size:clamp(0.85rem,1.4vw,1.1rem);
           font-style:italic;font-weight:300;
           color:#1e3a1e;line-height:1.6;
           font-family:var(--serif);
