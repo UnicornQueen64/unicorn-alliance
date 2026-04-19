@@ -521,9 +521,9 @@ export default function App() {
           /* Founder */
           .founder-img{height:380px;}
 
-          /* Art quote - truly full bleed on mobile */
-          .art-quote-card{border-radius:0 !important;margin:0 0 20px 0 !important;box-shadow:none;}
-          .art-quote-section{padding-left:0 !important;padding-right:0 !important;}
+          /* Art quote - keep card appearance on mobile */
+          .art-quote-card{border-radius:18px !important;margin:0 auto 20px !important;box-shadow:0 4px 40px rgba(30,60,10,0.18) !important;}
+          .art-quote-section{padding-left:16px !important;padding-right:16px !important;}
 
           /* CTA */
           .cta-img{height:520px;}
