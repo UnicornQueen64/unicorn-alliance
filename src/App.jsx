@@ -469,7 +469,7 @@ export default function App() {
           .card{padding:32px 24px;}
 
           /* Hero - no white strip */
-          .hero-text-block{padding:24px 24px 0px;}
+          .hero-text-block{padding:24px 24px 24px;}
           .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
           .hero-img-block{min-height:0;height:320px;}
