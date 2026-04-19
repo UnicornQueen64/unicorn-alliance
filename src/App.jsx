@@ -36,34 +36,17 @@ export default function App() {
           background:#3a6e28;
         }
 
-        /* ── BACKGROUND — layered CSS bokeh, deep greens ── */
+        /* ── BACKGROUND ── */
         .bg-bokeh{
           position:fixed;inset:0;z-index:0;
-          background:
-            radial-gradient(ellipse 600px 800px at 10% 20%, rgba(60,120,30,0.92) 0%, transparent 60%),
-            radial-gradient(ellipse 500px 600px at 85% 10%, rgba(40,100,20,0.85) 0%, transparent 55%),
-            radial-gradient(ellipse 700px 500px at 5% 80%, rgba(50,110,25,0.88) 0%, transparent 60%),
-            radial-gradient(ellipse 600px 700px at 90% 75%, rgba(35,90,18,0.9) 0%, transparent 55%),
-            radial-gradient(ellipse 800px 600px at 45% 50%, rgba(70,140,35,0.6) 0%, transparent 65%),
-            radial-gradient(ellipse 300px 300px at 25% 35%, rgba(120,190,60,0.55) 0%, transparent 50%),
-            radial-gradient(ellipse 250px 350px at 70% 60%, rgba(90,160,40,0.5) 0%, transparent 50%),
-            radial-gradient(ellipse 200px 200px at 55% 15%, rgba(150,210,80,0.45) 0%, transparent 45%),
-            radial-gradient(ellipse 180px 280px at 15% 65%, rgba(130,195,65,0.4) 0%, transparent 45%),
-            linear-gradient(145deg, #4a8c28 0%, #2e6618 30%, #3a7820 60%, #527a28 100%);
-          filter:blur(2px);
-          transform:scale(1.02);
+          background-image:url('/unicorn-assets/background.png');
+          background-size:cover;
+          background-position:center;
+          background-attachment:fixed;
         }
-        .bg-bokeh::before{
-          content:'';position:absolute;inset:0;
-          background:
-            radial-gradient(circle 280px at 30% 25%, rgba(180,230,100,0.3) 0%, transparent 55%),
-            radial-gradient(circle 200px at 75% 40%, rgba(100,180,45,0.35) 0%, transparent 50%),
-            radial-gradient(circle 320px at 60% 78%, rgba(80,155,35,0.3) 0%, transparent 55%),
-            radial-gradient(circle 150px at 20% 90%, rgba(160,220,70,0.25) 0%, transparent 45%);
-          filter:blur(30px);
-        }
+        .bg-bokeh::before{content:none;}
         @media(max-width:768px){
-          .bg-bokeh{background-attachment:scroll;filter:blur(1px);}
+          .bg-bokeh{background-attachment:scroll;}
         }
 
         .page{position:relative;z-index:1;padding:0;}
@@ -369,6 +352,20 @@ export default function App() {
         .art-text p{font-size:0.97rem;font-weight:400;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
         .art-press{font-size:0.85rem;font-weight:400;color:var(--text-light);font-family:var(--serif);text-align:left;}
 
+        /* Art split layout */
+        .art-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
+        .art-img-col{overflow:hidden;border-radius:18px 0 0 18px;min-height:460px;}
+        .art-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
+        .art-text-col{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
+        .art-text-col h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .art-text-col p{font-size:0.97rem;font-weight:400;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
+
+        /* Footer — hidden on desktop */
+        .site-footer{display:none;}
+        @media(max-width:768px){
+          .site-footer{display:block;}
+        }
+
         /* ══════════════════════════════════════
            12. QUOTE SLIDE — full bleed image, text on top
         ══════════════════════════════════════ */
@@ -500,6 +497,11 @@ export default function App() {
           /* Founder */
           .founder-img{height:380px;}
 
+          /* Art split */
+          .art-split{grid-template-columns:1fr;}
+          .art-img-col{border-radius:18px 18px 0 0;min-height:260px;}
+          .art-text-col{padding:28px 24px;}
+
           /* Art quote - keep card appearance on mobile */
           .art-quote-card{border-radius:18px !important;margin:0 auto 20px !important;box-shadow:0 4px 40px rgba(30,60,10,0.18) !important;}
           .art-quote-section{padding-left:16px !important;padding-right:16px !important;}
@@ -536,7 +538,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up — expect miracles.</p>
+              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up — expect miracles. The kind of magic that changes lives and empowers, healing ourselves and the planet.</p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
@@ -568,7 +570,7 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                <p className="reveal d2" style={{fontStyle:'italic',marginBottom:'20px',fontSize:'0.95rem',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',lineHeight:'1.7'}}>Your genius flowers when it is offered in service to the whole. — Richard Rudd, founder of The Gene Keys</p>
+                <p className="reveal d2" style={{fontStyle:'italic',marginBottom:'20px',fontSize:'0.95rem',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}>Your genius flowers when it is offered in service to the whole. — Richard Rudd, founder of The Gene Keys</p>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for poets, painters, landscapers, builders, composers, scientists, entrepreneurs, joy activators and iconoclasts — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
@@ -681,27 +683,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* ══ 9. PHASE II ══ */}
-        <section id="phase2" style={{padding:'0 40px'}}>
-          <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
-            <div className="phase2-inner">
-              <div className="phase2-img">
-                <img src="/unicorn-assets/phase2.jpg" alt="Phase II — Creative Mentorship" />
-              </div>
-              <div className="phase2-text">
-                <span className="phase-num" style={{display:'block',marginBottom:'6px',fontFamily:'var(--serif)',fontSize:'0.95rem',letterSpacing:'0.18em',color:'var(--text-mid)'}}>Phase II</span>
-                <h2 className="reveal d1">Inviting in the Vulnerable</h2>
-                <p className="reveal d2">Once the culture of makers is established, Unicorn offers <strong>creative mentorship</strong> to post-treatment teenagers and young adults with addiction and mental health challenges.</p>
-                <p className="reveal d3">Unicorn's team of makers provides highly personalized support in awakening the creative voice of the individual through projects. Whether a symphony, art exhibit, performance, or book — <strong>the creative process and the awakening of purpose heals.</strong></p>
-                <div className="phase2-highlight reveal d4">
-                  <h3>Family Reunification</h3>
-                  <p>Family members are invited to Unicorn for month-long visits to support the creative process of their loved one. This provides what other treatment models do not: a meeting ground for families to reunite, live together, and repair broken relationships.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ══ 10. REVENUE STREAMS ══ */}
         <section id="revenue" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal" style={{padding:'0',overflow:'hidden'}}>
@@ -760,14 +741,19 @@ export default function App() {
           </div>
         </section>
 
-        {/* ══ 13. MEGHAN'S ART ══ */}
+        {/* ══ 13. MEGHAN'S ART — image left, text right ══ */}
         <section id="art" style={{padding:'0 40px'}}>
-          <div className="card card-white reveal">
-            <div className="art-text">
-              <h2 className="reveal d1">Meghan's Art</h2>
-              <p className="reveal d2">Meghan's fantastical photographs and interactive sculpture tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that questions our relationship with the beyond.</p>
-              <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
-              <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
+          <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
+            <div className="art-split">
+              <div className="art-img-col">
+                <img src="/unicorn-assets/megansart.jpg" alt="Meghan Boody artwork" />
+              </div>
+              <div className="art-text-col">
+                <h2 className="reveal d1">Meghan's Art</h2>
+                <p className="reveal d2">Meghan's fantastical photographs and interactive sculpture tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that questions our relationship with the beyond.</p>
+                <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
+                <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -787,12 +773,11 @@ export default function App() {
           </div>
         </section>
 
-        {/* ══ FOOTER ══ */}
-        <footer style={{
+        {/* ══ FOOTER — mobile only ══ */}
+        <footer className="site-footer" style={{
           background:'#c8f0c8',
           textAlign:'center',
           padding:'32px 40px',
-          marginTop:'0',
         }}>
           <p style={{
             fontFamily:'var(--serif)',
