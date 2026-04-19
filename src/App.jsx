@@ -517,8 +517,9 @@ export default function App() {
           /* Founder */
           .founder-img{height:380px;}
 
-          /* Art quote */
-          .art-quote-card{padding:36px 24px;}
+          /* Art quote - full bleed on mobile */
+          .art-quote-card{border-radius:0;margin:0 0 20px 0;}
+          section:has(.art-quote-card){padding-left:0 !important;padding-right:0 !important;}
 
           /* CTA */
           .cta-img{height:520px;}
