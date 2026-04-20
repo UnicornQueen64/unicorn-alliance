@@ -745,7 +745,7 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.88rem;}
+          .hero-text-block .hero-sub{font-size:0.72rem;white-space:nowrap;overflow:hidden;}
           .hero-img-block{min-height:0;height:320px;}
 
           .who-logo{width:264px;height:264px;}
@@ -764,7 +764,7 @@ export default function App() {
           .lab-grid{grid-template-columns:1fr;}
           .no-place{padding:28px 24px;}
 
-          .quote-text{padding:24px 24px;}
+          .quote-sub{font-size:var(--fs-body);letter-spacing:0;font-weight:600;}
 
           .ritual-grid{grid-template-columns:1fr;}
 
@@ -855,7 +855,7 @@ export default function App() {
                   <li>crafting culture and environments that shift consciousness</li>
                   <li>carving new pathways between art and healing</li>
                   <li>celebrating healing modalities outside the medical model</li>
-                  <li>Cuddling with horses, goats, chickens and a herd of dogs every single day</li>
+                  <li>cuddling with horses, goats, chickens and a herd of dogs every single day</li>
                 </ul>
               </div>
             </div>
