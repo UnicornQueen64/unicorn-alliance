@@ -110,10 +110,10 @@ export default function App() {
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
-          text-align:right;
+          text-align:center;
         }
         .hero-text-block h1{
-          font-size:var(--fs-hero);
+          font-size:clamp(4rem, 10vw, 9rem);
           font-weight:700;
           letter-spacing:0.08em;
           line-height:1.0;
@@ -122,6 +122,7 @@ export default function App() {
           margin-bottom:18px;
           font-family:var(--serif);
           white-space:nowrap;
+          text-align:center;
         }
         .hero-text-block .hero-sub{
           font-size:var(--fs-body);
@@ -741,7 +742,7 @@ export default function App() {
           .card{padding:32px 24px;}
 
           .hero-text-block{padding:24px 24px 24px;}
-          .hero-text-block h1{white-space:normal;letter-spacing:0.06em;}
+          .hero-text-block h1{font-size:clamp(2rem, 10vw, 3.5rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
@@ -846,8 +847,8 @@ export default function App() {
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">Calling All Makers</h2>
                 <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, founder of The Gene Keys</p>
-                <p className="makers-intro reveal d3">The planet needs the full power of <strong>YOUR</strong> creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
-                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>POETS, PAINTERS, HEALERS, CHEFS, LANDSCAPERS, BUILDERS, COMPOSERS, SCIENTISTS, ENTREPRENEURS, SYSTEMS RETHINKERS, PHILANTHROPISTS, ANIMAL WHISPERERS, NATURE WORSHIPERS, LIGHT LANGUAGE LOVERS, BENEVOLENT GURUS, JOY ACTIVATORS, FUN FANATICS, ICONOCLASTS AND INTERNATIONAL MEN AND WOMEN OF MYSTERY</strong> — anyone passionate about:</p>
+                <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
+                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
                   <li>life inside a chateau in the french countryside</li>
                   <li>a diet of daily collaboration with talented peers</li>
