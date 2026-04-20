@@ -761,13 +761,15 @@ export default function App() {
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
 
           .setting1-img{height:280px;}
-          .setting1-text{padding:28px 24px;}
-          .setting-byline-mobile{display:block;}
+          .setting1-text{padding:20px 16px;}
+          .setting-byline-mobile{display:block;font-size:0.82rem;white-space:normal;}
           .setting-byline-desktop{display:none;}
 
           .setting2-split{grid-template-columns:1fr;}
           .setting2-img-col{border-radius:18px 18px 0 0;min-height:240px;}
-          .setting2-content{padding:28px 24px;}
+          .setting2-content{padding:28px 20px;}
+          .sf h3{text-align:center;letter-spacing:0.08em;white-space:normal;}
+          .sf p{text-align:left;white-space:normal;font-size:0.82rem;}
 
           .lab-grid{grid-template-columns:1fr;}
           .no-place{padding:28px 24px;}
@@ -792,6 +794,8 @@ export default function App() {
           .art-split{grid-template-columns:1fr;}
           .art-img-col{border-radius:18px 18px 0 0;min-height:260px;}
           .art-text-col{padding:28px 24px;}
+          .artwork-lozenge-desktop{display:none !important;}
+          .artwork-lozenge-mobile{display:block !important;}
 
           .art-quote-card{border-radius:18px !important;margin:0 auto 20px !important;box-shadow:0 4px 40px rgba(30,60,10,0.18) !important;}
           .art-quote-section{padding-left:16px !important;padding-right:16px !important;}
@@ -943,7 +947,7 @@ export default function App() {
             </div>
             <div className="quote-text">
               <p className="quote-title" style={{whiteSpace:'normal',fontSize:'clamp(1rem,1.8vw,1.4rem)',letterSpacing:'0.06em'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
-              <p className="quote-title quote-title-mobile" style={{display:'none',fontSize:'clamp(0.85rem,3.5vw,1rem)',letterSpacing:'0.04em'}}>LET THE BEAUTY OF A 17TH-<br/>CENTURY MONUMENT<br/>INFORM YOUR LIFE.</p>
+              <p className="quote-title quote-title-mobile" style={{display:'none',fontSize:'clamp(0.85rem,3.5vw,1rem)',letterSpacing:'0.04em'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
             </div>
           </div>
         </section>
@@ -1042,8 +1046,9 @@ export default function App() {
                 <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
                 <p className="reveal d5" style={{fontSize:'var(--fs-body)',fontWeight:'600',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
-                <div className="reveal d6" style={{marginTop:'16px',background:'rgba(185,218,185,0.72)',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'inline-block'}}>
-                  <p style={{fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
+                <div className="reveal d6" style={{marginTop:'16px',background:'rgba(185,218,185,0.72)',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'block'}}>
+                  <p className="artwork-lozenge-desktop" style={{fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work<br/><a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a></p>
+                  <p className="artwork-lozenge-mobile" style={{display:'none',fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
                 </div>
               </div>
             </div>
