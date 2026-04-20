@@ -18,13 +18,13 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#027018;
-          --teal-label:#027018;
-          --teal-accent:#027018;
-          --text-dark:#025510;
-          --text-body:#036014;
-          --text-mid:#046818;
-          --text-light:#057820;
+          --teal:#1a7a30;
+          --teal-label:#1a7a30;
+          --teal-accent:#1a7a30;
+          --text-dark:#1a6828;
+          --text-body:#1e7230;
+          --text-mid:#227838;
+          --text-light:#2a8840;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;font-size:115%;}
