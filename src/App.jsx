@@ -108,7 +108,7 @@ export default function App() {
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
-          text-align:right;
+          text-align:center;
         }
         .hero-text-block h1{
           font-size:clamp(4.5rem,12vw,11rem);font-weight:700;
@@ -228,8 +228,9 @@ export default function App() {
         }
         .setting1-text p{
           font-size:1rem;font-weight:600;color:var(--text-body);
-          line-height:1.8;max-width:580px;margin:0 auto;
+          line-height:1.8;max-width:none;margin:0 auto;
           font-family:var(--serif);text-align:center;
+          white-space:nowrap;
         }
 
         /* ══════════════════════════════════════
@@ -451,7 +452,7 @@ export default function App() {
           .page{padding-top:12px !important;}
 
           /* Hero */
-          .hero-text-block{padding:22px 22px 20px;text-align:right;}
+          .hero-text-block{padding:22px 22px 20px;text-align:center;}
           .hero-text-block h1{font-size:clamp(2.2rem,12vw,3.8rem);white-space:nowrap;}
           .hero-text-block .hero-sub{font-size:0.85rem;line-height:1.5;}
           .hero-img-block{min-height:0;height:280px;}
