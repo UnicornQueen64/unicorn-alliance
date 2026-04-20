@@ -110,7 +110,10 @@ export default function App() {
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
-          text-align:center;
+          text-align:left;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
         }
         .hero-text-block h1{
           font-size:clamp(2rem, 4vw, 2.8rem);
@@ -123,6 +126,7 @@ export default function App() {
           font-family:var(--serif);
           white-space:nowrap;
           text-align:center;
+          align-self:center;
         }
         .hero-text-block .hero-sub{
           font-size:var(--fs-body);
@@ -131,8 +135,7 @@ export default function App() {
           line-height:1.5;
           font-family:var(--serif);
           display:block;
-          max-width:620px;
-          margin:0 auto;
+          align-self:flex-start;
           text-align:left;
         }
         .hero-img-block{
@@ -948,7 +951,7 @@ export default function App() {
             </div>
             <div className="quote-text">
               <p className="quote-title" style={{whiteSpace:'normal',fontSize:'clamp(1rem,1.8vw,1.4rem)',letterSpacing:'0.06em'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
-              <p className="quote-title quote-title-mobile" style={{display:'none',fontSize:'clamp(0.85rem,3.5vw,1rem)',letterSpacing:'0.04em'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
+              <p className="quote-title quote-title-mobile" style={{display:'none',fontSize:'clamp(0.85rem,3.5vw,1rem)',letterSpacing:'0.04em',textTransform:'none'}}>Let the beauty of a 17th-century<br/>monument inform your life.</p>
             </div>
           </div>
         </section>
