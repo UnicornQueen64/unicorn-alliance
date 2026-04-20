@@ -18,13 +18,13 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#047a22;
-          --teal-label:#047a22;
-          --teal-accent:#047a22;
-          --text-dark:#046018;
-          --text-body:#056a1c;
-          --text-mid:#067020;
-          --text-light:#088028;
+          --teal:#027018;
+          --teal-label:#027018;
+          --teal-accent:#027018;
+          --text-dark:#025510;
+          --text-body:#036014;
+          --text-mid:#046818;
+          --text-light:#057820;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;font-size:115%;}
@@ -36,8 +36,15 @@ export default function App() {
           background:#3a6e28;
         }
         p,li,span,h1,h2,h3,h4,blockquote{color:inherit;}
+
+        /* 15% larger titles globally */
+        h1{font-size:calc(1em * 1.15) !important;}
+        h2{font-size:calc(1em * 1.15) !important;}
+        h3{font-size:calc(1em * 1.15) !important;}
+
         @media(max-width:768px){
           html{font-size:100%;}
+          h1,h2,h3{font-size:inherit !important;}
         }
 
         /* ── BACKGROUND ── */
