@@ -130,8 +130,9 @@ export default function App() {
           color:var(--text-body);
           line-height:1.5;
           font-family:var(--serif);
-          text-align:center;
-          display:inline-block;
+          display:block;
+          max-width:620px;
+          margin:0 auto;
           text-align:left;
         }
         .hero-img-block{
