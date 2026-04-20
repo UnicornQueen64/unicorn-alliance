@@ -872,7 +872,7 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>The Setting</h2>
-              <p>A 17th-century château in the heart of the Loire Valley — held by the same family for 9 generations.</p>
+              <p>A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
             </div>
           </div>
         </section>
