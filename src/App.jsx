@@ -778,9 +778,10 @@ export default function App() {
           .no-place{padding:28px 24px;}
 
           .quote-sub{font-size:var(--fs-body);letter-spacing:0;font-weight:600;}
+          .quote-text{padding:20px 16px 24px;}
           .quote-title{text-transform:uppercase;white-space:normal;}
           .quote-title:not(.quote-title-mobile){display:none;}
-          .quote-title-mobile{display:block !important;}
+          .quote-title-mobile{display:block !important;font-size:clamp(0.8rem,3.8vw,0.95rem);letter-spacing:0.03em;line-height:1.3;}
 
           .ritual-grid{grid-template-columns:1fr;}
 
