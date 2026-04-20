@@ -130,6 +130,7 @@ export default function App() {
           color:var(--text-body);
           line-height:1.5;
           font-family:var(--serif);
+          text-align:left;
         }
         .hero-img-block{
           width:100%;
@@ -636,7 +637,7 @@ export default function App() {
           font-size:clamp(1rem,1.8vw,1.4rem);
           font-style:italic;
           font-weight:600;
-          color:#2a2a22;
+          color:var(--text-dark);
           line-height:1.4;
           font-family:var(--serif);
           display:block;
@@ -751,7 +752,7 @@ export default function App() {
           .hero-text-block .hero-sub{font-size:0.72rem;white-space:nowrap;overflow:hidden;}
           .hero-img-block{min-height:0;height:320px;}
 
-          .who-logo{width:264px;height:264px;}
+          .who-logo{width:304px;height:304px;}
 
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
@@ -771,6 +772,8 @@ export default function App() {
 
           .quote-sub{font-size:var(--fs-body);letter-spacing:0;font-weight:600;}
           .quote-title{text-transform:uppercase;white-space:normal;}
+          .quote-title:not(.quote-title-mobile){display:none;}
+          .quote-title-mobile{display:block !important;}
 
           .ritual-grid{grid-template-columns:1fr;}
 
@@ -852,7 +855,7 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, founder of The Gene Keys</p>
+                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, The Gene Keys</p>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
@@ -877,7 +880,7 @@ export default function App() {
             <div className="setting1-text">
               <h2>THE SETTING</h2>
               <p className="setting-byline-desktop">A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
-              <p className="setting-byline-mobile">A 17th-century château in the heart<br/>of the Loire Valley — held by the same family<br/>for 9 generations.</p>
+              <p className="setting-byline-mobile">A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
             </div>
           </div>
         </section>
@@ -895,12 +898,12 @@ export default function App() {
                     {h:'Marquetry & Fireplaces',p:'Original craftsmanship preserved across nine generations of family stewardship.'},
                     {h:'Orangerie',p:'A grand orangerie — an invitation for a restaurant, exhibition space, or performance hall.'},
                     {h:'Hidden Stairways',p:"Secret passages and architectural mysteries woven into the château's bones."},
-                    {h:'Original 19th Century Darkroom',p:'Explore an untouched archive of glass slides and daguerreotypes.'},
+                    {h:'Original 19th Century Darkroom',p:'Explore an untouched archive of glass slides and daguerreotypes.',nowrap:true},
                     {h:'Stables, Atelier & Glacier',p:'A medieval icehouse and historic outbuildings ripe for transformation into studios, sanctuaries, and living spaces.'},
-                    {h:'Pigeonnier & 17th-Century Stove',p:'A giant pigeonnier and a remarkable 17th-century stove.'},
+                    {h:'Pigeonnier & 17th-Century Stove',p:'A giant pigeonnier and a remarkable 17th-century stove.',nowrap:true},
                   ].map((f,i)=>(
                     <div key={i} className={`sf reveal d${i+1}`}>
-                      <h3>{f.h}</h3><p>{f.p}</p>
+                      <h3>{f.h}</h3><p style={f.nowrap ? {whiteSpace:'nowrap'} : {}}>{f.p}</p>
                     </div>
                   ))}
                 </div>
@@ -937,8 +940,8 @@ export default function App() {
               <img src="/unicorn-assets/quote.jpg" alt="Château monument" />
             </div>
             <div className="quote-text">
-              <p className="quote-title">LIVING IN A 17TH-CENTURY MONUMENT</p>
-              <p className="quote-sub">Let the beauty of a 17th Century monument inform your life.</p>
+              <p className="quote-title" style={{whiteSpace:'nowrap'}}>LET THE BEAUTY OF A 17TH-CENTURY MONUMENT INFORM YOUR LIFE.</p>
+              <p className="quote-title quote-title-mobile" style={{display:'none'}}>LET THE BEAUTY OF A 17TH-CENTURY MONUMENT<br/>INFORM YOUR LIFE.</p>
             </div>
           </div>
         </section>
@@ -955,7 +958,7 @@ export default function App() {
                 {h:'Sunrise & sunset meditations',p:'Bookending each day with stillness and intention, anchoring the community in rhythm and light.',d:'d2'},
                 {h:'Communal silence',p:'Shared silence announced by a tolling bell four times a day.',d:'d3'},
                 {h:'Grounding in the garden',p:'Sing and tone while caring for plants — embodied presence through earth and voice.',d:'d2'},
-                {h:'Morning swims in the moat',p:"Daily swims in the spring-fed moat.",d:'d3'},
+                {h:'Movement in nature',p:'Daily swims in the spring-fed moat and yoga in the courtyard.',d:'d3'},
                 {h:'Rewilding through animal care',p:'Tending to animals as a practice of presence, empathy, and reconnection with the natural world.',d:'d2'},
                 {h:'Shared farm-to-table meals',p:"Farm to table and organic, prepared by Unicorn's private chef — nourishment as ceremony and community.",d:'d3'},
               ].map((r,i)=>(
