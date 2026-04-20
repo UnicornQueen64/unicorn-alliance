@@ -262,6 +262,8 @@ export default function App() {
           margin-bottom:16px;
           font-family:var(--serif);
         }
+        .setting-byline-mobile{display:none;}
+        .setting-byline-desktop{display:block;}
         .setting1-text p{
           font-size:var(--fs-body);
           font-weight:600;
@@ -757,6 +759,8 @@ export default function App() {
 
           .setting1-img{height:280px;}
           .setting1-text{padding:28px 24px;}
+          .setting-byline-mobile{display:block;}
+          .setting-byline-desktop{display:none;}
 
           .setting2-split{grid-template-columns:1fr;}
           .setting2-img-col{border-radius:18px 18px 0 0;min-height:240px;}
@@ -847,7 +851,7 @@ export default function App() {
                 <img src="/unicorn-assets/makers.jpg" alt="The Makers" />
               </div>
               <div className="makers-text-bottom">
-                <h2 className="reveal d1">Calling All Makers</h2>
+                <h2 className="reveal d1">CALLING ALL MAKERS</h2>
                 <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, founder of The Gene Keys</p>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
@@ -871,8 +875,9 @@ export default function App() {
               <img src="/unicorn-assets/setting1.jpg" alt="The Château" />
             </div>
             <div className="setting1-text">
-              <h2>The Setting</h2>
-              <p>A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
+              <h2>THE SETTING</h2>
+              <p className="setting-byline-desktop">A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
+              <p className="setting-byline-mobile">A 17th-century château in the heart<br/>of the Loire Valley — held by the same family<br/>for 9 generations.</p>
             </div>
           </div>
         </section>
@@ -908,7 +913,7 @@ export default function App() {
         <section id="laboratory" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="lab-header">
-              <h2>Château as Living Laboratory</h2>
+              <h2>CHÂTEAU AS LIVING LABORATORY</h2>
               <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, and a sanctuary.</p>
             </div>
             <div className="lab-grid">
@@ -942,7 +947,7 @@ export default function App() {
         <section id="phase1" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="phase-header">
-              <h2>Creating Culture</h2>
+              <h2>CREATING CULTURE</h2>
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity and collective care.</p>
             </div>
             <div className="ritual-grid">
@@ -970,7 +975,7 @@ export default function App() {
                 <img src="/unicorn-assets/revenue.jpeg" alt="Revenue" />
               </div>
               <div className="revenue-content">
-                <h2>Sustainable Opportunities</h2>
+                <h2>SUSTAINABLE OPPORTUNITIES</h2>
                 <div className="rev-list">
                   {[
                     {h:'Product sales',p:'Artisan goods, publications, and creative works produced by the maker community.'},
@@ -1027,7 +1032,7 @@ export default function App() {
                 <img src="/unicorn-assets/meghansart.jpg" alt="Meghan Boody artwork" />
               </div>
               <div className="art-text-col">
-                <h2 className="reveal d1">Meghan Boody's Art</h2>
+                <h2 className="reveal d1">MEGHAN BOODY'S ART</h2>
                 <p className="reveal d2">Meghan's fantastical photographs, interactive sculpture and pop-up performances tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that explores our relationship with the beyond.</p>
                 <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
