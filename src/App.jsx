@@ -18,13 +18,13 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#0a7a2e;
-          --teal-label:#0a7a2e;
-          --teal-accent:#0a7a2e;
-          --text-dark:#0a6822;
-          --text-body:#0c7226;
-          --text-mid:#0e7e2a;
-          --text-light:#128a30;
+          --teal:#087a28;
+          --teal-label:#087a28;
+          --teal-accent:#087a28;
+          --text-dark:#086e20;
+          --text-body:#097824;
+          --text-mid:#0a8228;
+          --text-light:#0e9030;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;font-size:126.5%;}
@@ -36,7 +36,6 @@ export default function App() {
           background:#3a6e28;
         }
         p,li,span,h1,h2,h3,h4,blockquote{color:inherit;}
-        p,li{text-wrap:balance;}
         @media(max-width:768px){
           html{font-size:110%;}
         }
