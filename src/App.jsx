@@ -18,13 +18,13 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#1a7a30;
-          --teal-label:#1a7a30;
-          --teal-accent:#1a7a30;
-          --text-dark:#1a6828;
-          --text-body:#1e7230;
-          --text-mid:#227838;
-          --text-light:#2a8840;
+          --teal:#046e22;
+          --teal-label:#046e22;
+          --teal-accent:#046e22;
+          --text-dark:#045c1c;
+          --text-body:#056820;
+          --text-mid:#057022;
+          --text-light:#067824;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;font-size:115%;}
@@ -111,7 +111,7 @@ export default function App() {
           text-align:right;
         }
         .hero-text-block h1{
-          font-size:clamp(3.5rem,10vw,9rem);font-weight:700;
+          font-size:clamp(4.5rem,12vw,11rem);font-weight:700;
           letter-spacing:0.06em;line-height:0.95;
           color:var(--text-dark);text-transform:uppercase;
           margin-bottom:18px;font-family:var(--serif);white-space:nowrap;
