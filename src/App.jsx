@@ -267,11 +267,11 @@ export default function App() {
           font-weight:600;
           color:var(--text-body);
           line-height:1.8;
-          max-width:580px;
+          max-width:680px;
           margin:0 auto;
           font-family:var(--serif);
           text-align:center;
-          white-space:nowrap;
+          white-space:normal;
         }
 
         /* ══════════════════════════════════════
