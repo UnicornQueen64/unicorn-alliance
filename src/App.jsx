@@ -21,10 +21,10 @@ export default function App() {
           --teal:#156030;
           --teal-label:#156030;
           --teal-accent:#156030;
-          --text-dark:#0a1e0c;
-          --text-body:#0e2810;
-          --text-mid:#163818;
-          --text-light:#1e5020;
+          --text-dark:#0d5c2a;
+          --text-body:#0d5c2a;
+          --text-mid:#0d5c2a;
+          --text-light:#0d5c2a;
           --serif:'Cormorant Garamond',Georgia,serif;
 
           /* ── TYPOGRAPHY SCALE ── */
@@ -1010,7 +1010,7 @@ export default function App() {
         {/* ══ 12. QUOTE SLIDE ══ */}
         <section className="art-quote-section" style={{padding:'0 40px'}}>
           <div className="art-quote-card reveal">
-            <img src="/unicorn-assets/quote2.jxl" alt="Quote" />
+            <img src="/unicorn-assets/quote2.jpeg" alt="Quote" />
             <div className="art-quote-grey-bar">
               <p className="art-quote-text">The beauty of the past informs innovation of the present.</p>
             </div>
