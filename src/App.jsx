@@ -278,7 +278,7 @@ export default function App() {
           max-width:680px;
           margin:0 auto;
           font-family:var(--serif);
-          text-align:center;
+          text-align:left;
           white-space:normal;
         }
 
@@ -477,6 +477,19 @@ export default function App() {
         /* ══════════════════════════════════════
            9. PHASE II
         ══════════════════════════════════════ */
+        .phase2-vertical{display:flex;flex-direction:column;}
+        .phase2-img-top{width:100%;overflow:hidden;font-size:0;line-height:0;}
+        .phase2-img-top img{width:100%;height:auto;display:block;object-fit:contain;vertical-align:bottom;}
+        .phase2-eyebrow{
+          font-size:var(--fs-label);
+          letter-spacing:0.28em;
+          text-transform:uppercase;
+          color:var(--teal-label);
+          font-family:var(--serif);
+          font-weight:600;
+          display:block;
+          margin-bottom:10px;
+        }
         .phase2-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;}
         .phase2-img{overflow:hidden;min-height:480px;}
         .phase2-img img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -632,21 +645,23 @@ export default function App() {
           vertical-align:bottom;margin:0;padding:0;
         }
         .art-quote-grey-bar{
-          background:#dcdcdc;
-          padding:18px 52px 20px;
+          background:var(--card-cream);
+          padding:28px 52px 30px;
           text-align:center;
           font-size:1rem;
           line-height:1;
         }
         .art-quote-text{
-          font-size:clamp(1rem,1.8vw,1.4rem);
-          font-style:italic;
-          font-weight:600;
+          font-size:clamp(0.9rem,1.6vw,1.25rem);
+          font-style:normal;
+          font-weight:700;
           color:var(--text-dark);
-          line-height:1.4;
+          line-height:1.3;
           font-family:var(--serif);
           display:block;
           white-space:nowrap;
+          text-transform:uppercase;
+          letter-spacing:0.06em;
         }
         .art-quote-text-overlay{display:none;}
 
@@ -785,9 +800,9 @@ export default function App() {
 
           .ritual-grid{grid-template-columns:1fr;}
 
-          .phase2-inner{grid-template-columns:1fr;}
-          .phase2-img{min-height:260px;}
-          .phase2-text{padding:28px 24px;}
+          .phase2-vertical{flex-direction:column;}
+          .phase2-img-top{border-radius:0;}
+          .phase2-text{padding:28px 24px !important;}
 
           .revenue-split{grid-template-columns:1fr;}
           .revenue-img-col{border-radius:18px 18px 0 0;min-height:240px;}
@@ -803,7 +818,7 @@ export default function App() {
 
           .art-quote-card{border-radius:18px !important;margin:0 auto 20px !important;box-shadow:0 4px 40px rgba(30,60,10,0.18) !important;}
           .art-quote-section{padding-left:16px !important;padding-right:16px !important;}
-          .art-quote-text{white-space:normal;}
+          .art-quote-text{white-space:normal;letter-spacing:0.03em;}
 
           .cta-img{height:520px;}
           .cta-banner{padding:20px 24px;}
@@ -850,7 +865,7 @@ export default function App() {
               <p className="who-tagline reveal d3">Makers Make Miracles</p>
               <div className="who-divider reveal d4" />
               <div className="who-text reveal d5">
-                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives and empowers, healing ourselves and Planet Earth.</p>
+                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives and empowers — healing ourselves and the planet.</p>
               </div>
             </div>
           </div>
@@ -869,12 +884,12 @@ export default function App() {
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
-                  <li>life inside a chateau in the french countryside</li>
-                  <li>a diet of daily collaboration with talented peers</li>
-                  <li>crafting culture and environments that shift consciousness</li>
-                  <li>carving new pathways between art and healing</li>
-                  <li>celebrating healing modalities outside the medical model</li>
-                  <li>cuddling with horses, goats, chickens and a herd of dogs every single day</li>
+                  <li><strong>life inside a chateau in the french countryside</strong></li>
+                  <li><strong>a diet of daily collaboration with talented peers</strong></li>
+                  <li><strong>crafting culture and environments that shift consciousness</strong></li>
+                  <li><strong>carving new pathways between art and healing</strong></li>
+                  <li><strong>celebrating healing modalities outside the medical model</strong></li>
+                  <li><strong>cuddling with horses, goats, chickens and a herd of dogs every single day</strong></li>
                 </ul>
               </div>
             </div>
@@ -889,8 +904,8 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>THE SETTING</h2>
-              <p className="setting-byline-desktop">A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
-              <p className="setting-byline-mobile">A 17th-century château in the heart of the Loire Valley<br/>— held by the same family for 9 generations.</p>
+              <p className="setting-byline-desktop" style={{textAlign:'left'}}>A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of Loire Valley.</p>
+              <p className="setting-byline-mobile" style={{textAlign:'left'}}>A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of Loire Valley.</p>
             </div>
           </div>
         </section>
@@ -927,7 +942,7 @@ export default function App() {
           <div className="card card-sage reveal">
             <div className="lab-header">
               <h2>CHÂTEAU AS LIVING LABORATORY</h2>
-              <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, and a sanctuary.</p>
+              <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments <strong>in community</strong> that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, a sanctuary.</p>
             </div>
             <div className="lab-grid">
               <div className="lab-item reveal d2"><h3>Beauty as Mood Enhancer</h3><p>Environments that actively shift consciousness.</p></div>
@@ -960,6 +975,7 @@ export default function App() {
         <section id="phase1" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="phase-header">
+              <span className="phase-num">Phase I: Château as Living Laboratory</span>
               <h2>CREATING CULTURE</h2>
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity and collective care.</p>
             </div>
@@ -980,6 +996,27 @@ export default function App() {
           </div>
         </section>
 
+        {/* ══ 9. PHASE II ══ */}
+        <section id="phase2" style={{padding:'0 40px'}}>
+          <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
+            <div className="phase2-vertical">
+              <div className="phase2-img-top">
+                <img src="/unicorn-assets/invitingthevulnerable.jpeg" alt="Inviting the Vulnerable" />
+              </div>
+              <div className="phase2-text" style={{padding:'44px 52px'}}>
+                <p className="phase2-eyebrow">Phase II</p>
+                <h2 style={{textAlign:'left',marginBottom:'18px'}}>Inviting in the Vulnerable</h2>
+                <p>Once the culture of makers is established, Unicorn offers <strong>creative mentorship</strong> to post-treatment teenagers and young adults with addiction and mental health challenges.</p>
+                <p>Unicorn's team of makers provides highly personalized support in awakening the creative voice of the individual through projects. Whether a symphony, art exhibit, performance, or book — <strong>the creative process and the awakening of purpose heals.</strong></p>
+                <div className="phase2-highlight">
+                  <h3 style={{textAlign:'center',marginBottom:'8px'}}>Family Reunification</h3>
+                  <p>Family members are invited to Unicorn for month-long visits to support the creative process of their loved one. This provides what other treatment models do not: a meeting ground for families to reunite, live together, and repair broken relationships.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ══ 10. REVENUE STREAMS ══ */}
         <section id="revenue" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal" style={{padding:'0',overflow:'hidden'}}>
@@ -995,7 +1032,7 @@ export default function App() {
                     {h:'Experiential programs',p:'Immersive retreats, workshops, and healing programs hosted at the château.'},
                     {h:'Strategic partnerships',p:'Collaborations with aligned organizations in art, wellness, and education.'},
                     {h:'Land leases to farmers',p:"Agricultural partnerships that activate the château's land and support local food systems."},
-                    {h:'Short & long-term rentals',p:'Flexible timeshare leasing of rooms and outbuildings to makers and visiting creatives.'},
+                    {h:'Co-living Residences',p:'Flexible leasing of rooms and outbuildings to makers and visiting creatives.'},
                   ].map((r,i)=>(
                     <div key={i} className={`rev-item reveal d${i+2}`}>
                       <h3>{r.h}</h3><p>{r.p}</p>
