@@ -652,14 +652,14 @@ export default function App() {
           line-height:1;
         }
         .art-quote-text{
-          font-size:clamp(0.9rem,1.6vw,1.25rem);
+          font-size:clamp(0.75rem,1.2vw,1rem);
           font-style:normal;
           font-weight:700;
           color:var(--text-dark);
           line-height:1.3;
           font-family:var(--serif);
           display:block;
-          white-space:nowrap;
+          white-space:normal;
           text-transform:uppercase;
           letter-spacing:0.06em;
         }
