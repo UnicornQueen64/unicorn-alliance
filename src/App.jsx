@@ -504,7 +504,7 @@ export default function App() {
           font-family:var(--serif);
           font-weight:750;
           display:block;
-          margin-bottom:10px;
+          margin-bottom:8px;
           text-align:left;
         }
         .phase2-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;}
@@ -1030,7 +1030,7 @@ export default function App() {
                 <img src="/unicorn-assets/invitingthevulnerable.jpg" alt="Inviting the Vulnerable" />
               </div>
               <div className="phase2-text" style={{padding:'44px 52px'}}>
-                <p className="phase2-eyebrow">Phase II</p>
+                <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase II</span>
                 <h2 style={{textAlign:'left',marginBottom:'18px'}}>INVITING IN THE VULNERABLE</h2>
                 <p>Once the culture of makers is established, Unicorn offers <strong>creative mentorship</strong> to post-treatment teenagers and young adults with addiction and mental health challenges.</p>
                 <p>Unicorn's team of makers provides highly personalized support in awakening the creative voice of the individual through projects. Whether a symphony, art exhibit, performance, or book — <strong>the creative process and the awakening of purpose heals.</strong></p>
