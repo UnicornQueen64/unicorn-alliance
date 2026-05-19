@@ -27,13 +27,19 @@ export default function App() {
           --text-light:#0a7a30;
           --serif:'Cormorant Garamond',Georgia,serif;
 
-          /* ── TYPOGRAPHY SCALE ── */
-          --fs-hero:    clamp(1.6rem, 4vw, 3.5rem);      /* Hero H1 — page title */
-          --fs-section: clamp(1.15rem, 2.3vw, 1.84rem);  /* Section H2 — +15% */
-          --fs-card:    clamp(0.98rem, 1.15vw, 1.09rem); /* Card H3 — +15% */
-          --fs-body:    clamp(0.95rem, 1.2vw, 1.05rem);  /* Body paragraphs */
-          --fs-small:   0.88rem;                          /* Small / supporting text */
-          --fs-label:   0.68rem;                          /* Eyebrow labels */
+          /* ── TYPOGRAPHY SCALE — weights bumped ~20% bolder ── */
+          --fs-hero:    clamp(1.6rem, 4vw, 3.5rem);
+          --fs-section: clamp(1.15rem, 2.3vw, 1.84rem);
+          --fs-card:    clamp(0.98rem, 1.15vw, 1.09rem);
+          --fs-body:    clamp(0.95rem, 1.2vw, 1.05rem);
+          --fs-small:   0.88rem;
+          --fs-label:   0.68rem;
+
+          /* Global weight bump: base body weight goes from 400 → 500 */
+          --fw-body: 500;
+          --fw-bold: 800;
+          --fw-card: 800;
+          --fw-label: 700;
         }
         html{scroll-behavior:smooth;}
         body{
@@ -42,6 +48,7 @@ export default function App() {
           overflow-x:hidden;
           position:relative;
           background:#3a6e28;
+          font-weight:var(--fw-body);
         }
 
         /* ── BACKGROUND ── */
@@ -88,6 +95,7 @@ export default function App() {
         /* ── SHARED ── */
         .label{
           font-size:var(--fs-label);
+          font-weight:var(--fw-label);
           letter-spacing:0.28em;text-transform:uppercase;
           color:var(--teal-label);display:block;
           margin-bottom:14px;font-family:var(--serif);
@@ -116,7 +124,7 @@ export default function App() {
         }
         .hero-text-block h1{
           font-size:clamp(2rem, 4vw, 2.8rem);
-          font-weight:700;
+          font-weight:800;
           letter-spacing:0.08em;
           line-height:1.0;
           color:var(--text-dark);
@@ -128,7 +136,7 @@ export default function App() {
         }
         .hero-text-block .hero-sub{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-body);
           line-height:1.5;
           font-family:var(--serif);
@@ -163,7 +171,7 @@ export default function App() {
           text-transform:uppercase;
           color:var(--text-dark);
           font-family:var(--serif);
-          font-weight:700;
+          font-weight:800;
           margin-top:12px;
           margin-bottom:32px;
           line-height:1.0;
@@ -175,7 +183,7 @@ export default function App() {
         }
         .who-tagline{
           font-size:clamp(0.75rem,1.2vw,0.95rem);
-          font-weight:700;
+          font-weight:800;
           letter-spacing:0.28em;
           text-transform:uppercase;
           color:var(--text-mid);
@@ -186,7 +194,7 @@ export default function App() {
         .who-divider{width:60px;height:1px;background:var(--teal-accent);margin:0 auto 24px;}
         .who-text p{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           line-height:1.9;
           color:var(--text-body);
           max-width:620px;
@@ -210,15 +218,15 @@ export default function App() {
         .makers-text-bottom{padding:44px 52px;background:var(--card-white);}
         .makers-text-bottom h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
-          margin-bottom:16px;
+          margin-bottom:20px;
           font-family:var(--serif);
           text-align:center;
         }
         .makers-intro{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-mid);
           line-height:1.7;
           margin-bottom:20px;
@@ -228,7 +236,7 @@ export default function App() {
         .makers-bullets{list-style:none;margin:0;padding:0;}
         .makers-bullets li{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-body);
           line-height:1.75;
           font-family:var(--serif);
@@ -262,7 +270,7 @@ export default function App() {
         }
         .setting1-text h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           letter-spacing:0.04em;
           margin-bottom:16px;
@@ -271,15 +279,15 @@ export default function App() {
         .setting-byline-mobile{display:none;}
         .setting-byline-desktop{display:block;}
         .setting1-text p{
-          font-size:var(--fs-body);
-          font-weight:400;
+          font-size:clamp(1.05rem, 1.5vw, 1.25rem);
+          font-weight:700;
           color:var(--text-body);
-          line-height:1.8;
-          max-width:680px;
+          line-height:1.4;
+          max-width:760px;
           margin:0 auto;
           font-family:var(--serif);
           text-align:left;
-          white-space:normal;
+          white-space:nowrap;
         }
 
         /* ══════════════════════════════════════
@@ -295,13 +303,13 @@ export default function App() {
           letter-spacing:0.12em;
           text-transform:uppercase;
           color:var(--teal);
-          font-weight:700;
+          font-weight:800;
           margin-bottom:5px;
           font-family:var(--serif);
         }
         .sf p{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           line-height:1.6;
           color:var(--text-body);
           font-family:var(--serif);
@@ -314,14 +322,14 @@ export default function App() {
         .lab-header{text-align:center;margin-bottom:40px;}
         .lab-header h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:14px;
           font-family:var(--serif);
         }
         .lab-header p{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-mid);
           line-height:1.8;
           max-width:680px;
@@ -340,7 +348,7 @@ export default function App() {
         .lab-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.8);}
         .lab-item h3{
           font-size:var(--fs-card);
-          font-weight:700;
+          font-weight:800;
           color:var(--teal);
           margin-bottom:8px;
           font-family:var(--serif);
@@ -348,7 +356,7 @@ export default function App() {
         }
         .lab-item p{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           line-height:1.65;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -367,12 +375,12 @@ export default function App() {
           display:block;
           margin-bottom:10px;
           font-family:var(--serif);
-          font-weight:700;
+          font-weight:800;
           line-height:1.15;
         }
         .no-place h3{
           font-size:var(--fs-card);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-mid);
           margin-bottom:20px;
           font-family:var(--serif);
@@ -380,7 +388,7 @@ export default function App() {
         }
         .no-place p{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           line-height:1.9;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -399,18 +407,20 @@ export default function App() {
         .quote-img img{width:100%;height:auto;display:block;object-fit:contain;}
         .quote-text{padding:36px 60px 40px;text-align:center;}
         .quote-title{
-          font-size:var(--fs-section);
-          font-weight:700;
+          font-size:clamp(0.9rem,1.5vw,1.2rem);
+          font-weight:800;
           color:var(--text-dark);
           font-family:var(--serif);
           margin-bottom:14px;
-          letter-spacing:0.04em;
-          line-height:1.2;
+          letter-spacing:0.06em;
+          line-height:1.15;
           display:block;
+          text-transform:uppercase;
+          white-space:nowrap;
         }
         .quote-sub{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:700;
           color:var(--text-mid);
           font-family:var(--serif);
           letter-spacing:0.04em;
@@ -423,7 +433,7 @@ export default function App() {
         .phase-header{text-align:center;margin-bottom:44px;}
         .phase-header .phase-num{
           font-size:var(--fs-label);
-          font-weight:600;
+          font-weight:700;
           letter-spacing:0.28em;
           text-transform:uppercase;
           color:var(--text-mid);
@@ -433,14 +443,14 @@ export default function App() {
         }
         .phase-header h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:14px;
           font-family:var(--serif);
         }
         .phase-header p{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-mid);
           line-height:1.8;
           max-width:640px;
@@ -459,7 +469,7 @@ export default function App() {
         .ritual-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.78);}
         .ritual-item h3{
           font-size:var(--fs-card);
-          font-weight:700;
+          font-weight:800;
           color:var(--teal);
           margin-bottom:7px;
           font-family:var(--serif);
@@ -467,7 +477,7 @@ export default function App() {
         }
         .ritual-item p{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           line-height:1.6;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -486,7 +496,7 @@ export default function App() {
           text-transform:uppercase;
           color:var(--teal-label);
           font-family:var(--serif);
-          font-weight:600;
+          font-weight:700;
           display:block;
           margin-bottom:10px;
         }
@@ -496,7 +506,7 @@ export default function App() {
         .phase2-text{padding:44px 44px;display:flex;flex-direction:column;justify-content:center;}
         .phase2-text h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:18px;
           font-family:var(--serif);
@@ -504,7 +514,7 @@ export default function App() {
         }
         .phase2-text p{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           line-height:1.85;
           color:var(--text-body);
           margin-bottom:16px;
@@ -514,7 +524,7 @@ export default function App() {
         .phase2-highlight{background:rgba(200,230,180,0.4);border-radius:8px;padding:18px 22px;margin-top:8px;}
         .phase2-highlight h3{
           font-size:var(--fs-card);
-          font-weight:700;
+          font-weight:800;
           color:var(--teal);
           margin-bottom:6px;
           font-family:var(--serif);
@@ -522,7 +532,7 @@ export default function App() {
         }
         .phase2-highlight p{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-mid);
           line-height:1.65;
           font-family:var(--serif);
@@ -533,12 +543,12 @@ export default function App() {
            10. REVENUE
         ══════════════════════════════════════ */
         .revenue-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
-        .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;}
-        .revenue-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
+        .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:center;}
+        .revenue-img-col img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
         .revenue-content{padding:52px 48px;}
         .revenue-content h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:32px;
           font-family:var(--serif);
@@ -555,7 +565,7 @@ export default function App() {
         .rev-item:hover{transform:translateX(4px);background:rgba(255,255,255,0.8);}
         .rev-item h3{
           font-size:var(--fs-card);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:5px;
           font-family:var(--serif);
@@ -563,7 +573,7 @@ export default function App() {
         }
         .rev-item p{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           line-height:1.6;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -575,7 +585,7 @@ export default function App() {
         ══════════════════════════════════════ */
         .founder-section-title{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           letter-spacing:0.06em;
           text-transform:uppercase;
@@ -587,7 +597,7 @@ export default function App() {
         .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
         .ft-name{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:10px;
           font-family:var(--serif);
@@ -596,7 +606,7 @@ export default function App() {
         }
         .ft-sub{
           font-size:var(--fs-label);
-          font-weight:700;
+          font-weight:800;
           letter-spacing:0.3em;
           text-transform:uppercase;
           color:var(--text-light);
@@ -613,7 +623,7 @@ export default function App() {
           padding:12px 0;
           border-bottom:1px solid rgba(80,130,60,0.15);
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           line-height:1.65;
           color:var(--text-body);
           font-family:var(--serif);
@@ -654,7 +664,7 @@ export default function App() {
         .art-quote-text{
           font-size:clamp(0.75rem,1.2vw,1rem);
           font-style:normal;
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           line-height:1.3;
           font-family:var(--serif);
@@ -674,7 +684,7 @@ export default function App() {
         .art-text-col{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
         .art-text-col h2{
           font-size:var(--fs-section);
-          font-weight:700;
+          font-weight:800;
           color:var(--text-dark);
           margin-bottom:18px;
           font-family:var(--serif);
@@ -682,7 +692,7 @@ export default function App() {
         }
         .art-text-col p{
           font-size:var(--fs-body);
-          font-weight:400;
+          font-weight:500;
           line-height:1.85;
           color:var(--text-body);
           margin-bottom:16px;
@@ -691,7 +701,7 @@ export default function App() {
         }
         .art-press{
           font-size:var(--fs-small);
-          font-weight:400;
+          font-weight:500;
           color:var(--text-light);
           font-family:var(--serif);
           text-align:left;
@@ -716,7 +726,7 @@ export default function App() {
         }
         .cta-banner h2{
           font-size:var(--fs-section);
-          font-weight:300;
+          font-weight:500;
           color:#fff;
           letter-spacing:0.1em;
           text-transform:uppercase;
@@ -725,7 +735,7 @@ export default function App() {
         }
         .cta-banner p{
           font-size:var(--fs-body);
-          font-weight:300;
+          font-weight:400;
           color:rgba(255,255,255,0.78);
           margin-bottom:20px;
           line-height:1.5;
@@ -780,7 +790,8 @@ export default function App() {
 
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
-          .setting-byline-mobile{display:block;font-size:0.82rem;white-space:normal;}
+          .setting1-text p{white-space:normal;font-size:0.95rem;}
+          .setting-byline-mobile{display:block;font-size:0.9rem;white-space:normal;font-weight:700;}
           .setting-byline-desktop{display:none;}
 
           .setting2-split{grid-template-columns:1fr;}
@@ -792,11 +803,9 @@ export default function App() {
           .lab-grid{grid-template-columns:1fr;}
           .no-place{padding:28px 24px;}
 
-          .quote-sub{font-size:var(--fs-body);letter-spacing:0;font-weight:600;}
+          .quote-title{white-space:normal;font-size:clamp(0.8rem,3.5vw,1rem) !important;}
+          .quote-sub{font-size:var(--fs-body);letter-spacing:0;font-weight:700;}
           .quote-text{padding:20px 16px 24px;}
-          .quote-title{text-transform:uppercase;white-space:normal;}
-          .quote-title:not(.quote-title-mobile){display:none;}
-          .quote-title-mobile{display:block !important;font-size:clamp(0.8rem,3.8vw,0.95rem);letter-spacing:0.03em;line-height:1.3;}
 
           .ritual-grid{grid-template-columns:1fr;}
 
@@ -865,7 +874,8 @@ export default function App() {
               <p className="who-tagline reveal d3">Makers Make Miracles</p>
               <div className="who-divider reveal d4" />
               <div className="who-text reveal d5">
-                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives and empowers — healing ourselves and the planet.</p>
+                {/* CHANGE: "the planet" → "Planet Earth." */}
+                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives and empowers — healing ourselves and Planet Earth.</p>
               </div>
             </div>
           </div>
@@ -880,7 +890,11 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, The Gene Keys</p>
+                {/* CHANGE: quote larger, centered italic line + Richard Rudd left-justified on own line */}
+                <div className="reveal d2" style={{marginBottom:'20px',textAlign:'center'}}>
+                  <p style={{fontSize:'clamp(1.1rem,1.6vw,1.35rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.6',display:'block',textAlign:'center'}}>Your genius flowers when it is offered in service to the whole.</p>
+                  <p style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'6px'}}>— Richard Rudd, The Gene Keys</p>
+                </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
@@ -904,8 +918,9 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>THE SETTING</h2>
-              <p className="setting-byline-desktop" style={{textAlign:'left'}}>A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of Loire Valley.</p>
-              <p className="setting-byline-mobile" style={{textAlign:'left'}}>A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of Loire Valley.</p>
+              {/* CHANGE: one line, bold, slightly bigger, "…the Loire Valley" */}
+              <p className="setting-byline-desktop">A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of …the Loire Valley.</p>
+              <p className="setting-byline-mobile">A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of …the Loire Valley.</p>
             </div>
           </div>
         </section>
@@ -959,14 +974,14 @@ export default function App() {
         </section>
 
         {/* ══ 7. MONUMENT ══ */}
+        {/* CHANGE: one line, smaller font so it fits without wrapping */}
         <section style={{padding:'0 40px'}} className="reveal">
           <div className="quote-card">
             <div className="quote-img">
               <img src="/unicorn-assets/quote.jpg" alt="Château monument" />
             </div>
             <div className="quote-text">
-              <p className="quote-title" style={{whiteSpace:'normal',fontSize:'clamp(1rem,1.8vw,1.4rem)',letterSpacing:'0.06em'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
-              <p className="quote-title quote-title-mobile" style={{display:'none',fontSize:'clamp(0.85rem,3.5vw,1rem)',letterSpacing:'0.04em',textTransform:'uppercase'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
+              <p className="quote-title">LET THE BEAUTY OF A 17TH-CENTURY MONUMENT INFORM YOUR LIFE.</p>
             </div>
           </div>
         </section>
@@ -1017,11 +1032,12 @@ export default function App() {
         </section>
 
         {/* ══ 10. REVENUE STREAMS ══ */}
+        {/* CHANGE: image centered via object-position:center */}
         <section id="revenue" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="revenue-split">
               <div className="revenue-img-col">
-                <img src="/unicorn-assets/revenue.jpeg" alt="Revenue" />
+                <img src="/unicorn-assets/revenue.jpeg" alt="Revenue" style={{objectPosition:'center center'}} />
               </div>
               <div className="revenue-content">
                 <h2>SUSTAINABLE OPPORTUNITIES</h2>
@@ -1085,10 +1101,10 @@ export default function App() {
                 <p className="reveal d2">Meghan's fantastical photographs, interactive sculpture and pop-up performances tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that explores our relationship with the beyond.</p>
                 <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
-                <p className="reveal d5" style={{fontSize:'var(--fs-body)',fontWeight:'600',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
+                <p className="reveal d5" style={{fontSize:'var(--fs-body)',fontWeight:'700',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
                 <div className="reveal d6" style={{marginTop:'16px',background:'rgba(185,218,185,0.72)',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'block'}}>
-                  <p className="artwork-lozenge-desktop" style={{fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work<br/><a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a></p>
-                  <p className="artwork-lozenge-mobile" style={{display:'none',fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
+                  <p className="artwork-lozenge-desktop" style={{fontSize:'var(--fs-body)',fontWeight:'800',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work<br/><a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'800'}}>HERE</a></p>
+                  <p className="artwork-lozenge-mobile" style={{display:'none',fontSize:'var(--fs-body)',fontWeight:'800',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'800'}}>HERE</a>.</p>
                 </div>
               </div>
             </div>
@@ -1121,7 +1137,7 @@ export default function App() {
             letterSpacing:'0.22em',
             textTransform:'uppercase',
             color:'var(--teal)',
-            fontWeight:400,
+            fontWeight:500,
           }}>Unicorn Alliance © 2026</p>
         </footer>
 
