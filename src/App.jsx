@@ -36,10 +36,12 @@ export default function App() {
           --fs-label:   0.68rem;
 
           /* Global weight bump: base body weight goes from 400 → 500 */
-          --fw-body: 500;
-          --fw-bold: 800;
-          --fw-card: 800;
-          --fw-label: 700;
+          --fw-body: 580;
+          --fw-bold: 900;
+          --fw-card: 900;
+          --fw-label: 750;
+          /* unified eyebrow size — between old Phase I (0.68rem) and Phase II label */
+          --fs-eyebrow: 0.82rem;
         }
         html{scroll-behavior:smooth;}
         body{
@@ -79,7 +81,7 @@ export default function App() {
           border-radius:18px;
           margin:0 auto 20px;
           max-width:900px;
-          padding:52px 60px;
+          padding:44px 52px;
           box-shadow:0 4px 40px rgba(30,60,10,0.18);
         }
         .card-cream{background:var(--card-cream);}
@@ -135,15 +137,19 @@ export default function App() {
           text-align:center;
         }
         .hero-text-block .hero-sub{
-          font-size:var(--fs-body);
-          font-weight:500;
+          font-size:clamp(1.05rem, 1.4vw, 1.2rem);
+          font-weight:600;
           color:var(--text-body);
-          line-height:1.5;
+          line-height:1.55;
           font-family:var(--serif);
           display:block;
           width:620px;
           max-width:100%;
           text-align:left;
+        }
+        .hero-sub-miracles{
+          font-weight:800;
+          font-style:normal;
         }
         .hero-img-block{
           width:100%;
@@ -172,8 +178,8 @@ export default function App() {
           color:var(--text-dark);
           font-family:var(--serif);
           font-weight:800;
-          margin-top:12px;
-          margin-bottom:32px;
+          margin-top:10px;
+          margin-bottom:27px;
           line-height:1.0;
         }
         .who-logo{
@@ -188,7 +194,7 @@ export default function App() {
           text-transform:uppercase;
           color:var(--text-mid);
           font-family:var(--serif);
-          margin-bottom:24px;
+          margin-bottom:20px;
           line-height:1.4;
         }
         .who-divider{width:60px;height:1px;background:var(--teal-accent);margin:0 auto 24px;}
@@ -491,14 +497,15 @@ export default function App() {
         .phase2-img-top{width:100%;overflow:hidden;font-size:0;line-height:0;}
         .phase2-img-top img{width:100%;height:auto;display:block;object-fit:contain;vertical-align:bottom;}
         .phase2-eyebrow{
-          font-size:var(--fs-label);
+          font-size:var(--fs-eyebrow);
           letter-spacing:0.28em;
           text-transform:uppercase;
           color:var(--teal-label);
           font-family:var(--serif);
-          font-weight:700;
+          font-weight:750;
           display:block;
           margin-bottom:10px;
+          text-align:left;
         }
         .phase2-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;}
         .phase2-img{overflow:hidden;min-height:480px;}
@@ -779,7 +786,7 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.72rem;white-space:nowrap;overflow:hidden;}
+          .hero-text-block .hero-sub{font-size:1rem;font-weight:600;white-space:normal;}
           .hero-img-block{min-height:0;height:320px;}
 
           .who-logo{width:304px;height:304px;}
@@ -787,6 +794,7 @@ export default function App() {
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
+          .makers-quote-attribution{text-align:left !important;}
 
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
@@ -857,7 +865,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water.<br/>When they show up — expect miracles.</p>
+              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water.<br/>When they show up — <span className="hero-sub-miracles">expect miracles.</span></p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
@@ -894,7 +902,7 @@ export default function App() {
                 <div className="reveal d2" style={{marginBottom:'20px',display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <div style={{display:'inline-block',textAlign:'left'}}>
                     <p style={{fontSize:'clamp(1.1rem,1.6vw,1.35rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.6',textAlign:'center'}}>Your genius flowers when it is offered in service to the whole.</p>
-                    <p style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'6px'}}>— Richard Rudd, The Gene Keys</p>
+                    <p className="makers-quote-attribution" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'6px'}}>— Richard Rudd, The Gene Keys</p>
                   </div>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
@@ -958,7 +966,7 @@ export default function App() {
         <section id="laboratory" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="lab-header">
-              <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-label)',fontWeight:700,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
+              <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
               <h2 style={{textTransform:'none'}}>Château as Living Laboratory</h2>
               <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments <strong>in community</strong> that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, a sanctuary.</p>
             </div>
@@ -993,7 +1001,7 @@ export default function App() {
         <section id="phase1" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="phase-header">
-              <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-label)',fontWeight:700,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
+              <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I (Cont.)</span>
               <h2>CREATING CULTURE</h2>
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity and collective care.</p>
             </div>
@@ -1023,7 +1031,7 @@ export default function App() {
               </div>
               <div className="phase2-text" style={{padding:'44px 52px'}}>
                 <p className="phase2-eyebrow">Phase II</p>
-                <h2 style={{textAlign:'left',marginBottom:'18px'}}>Inviting in the Vulnerable</h2>
+                <h2 style={{textAlign:'left',marginBottom:'18px'}}>INVITING IN THE VULNERABLE</h2>
                 <p>Once the culture of makers is established, Unicorn offers <strong>creative mentorship</strong> to post-treatment teenagers and young adults with addiction and mental health challenges.</p>
                 <p>Unicorn's team of makers provides highly personalized support in awakening the creative voice of the individual through projects. Whether a symphony, art exhibit, performance, or book — <strong>the creative process and the awakening of purpose heals.</strong></p>
                 <div className="phase2-highlight">
