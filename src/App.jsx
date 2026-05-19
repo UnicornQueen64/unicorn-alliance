@@ -890,10 +890,12 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                {/* CHANGE: quote larger, centered italic line + Richard Rudd left-justified on own line */}
-                <div className="reveal d2" style={{marginBottom:'20px',textAlign:'center'}}>
-                  <p style={{fontSize:'clamp(1.1rem,1.6vw,1.35rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.6',display:'block',textAlign:'center'}}>Your genius flowers when it is offered in service to the whole.</p>
-                  <p style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'6px'}}>— Richard Rudd, The Gene Keys</p>
+                {/* quote: italic centered, Richard Rudd left-aligned flush under it as a unit */}
+                <div className="reveal d2" style={{marginBottom:'20px',display:'flex',flexDirection:'column',alignItems:'center'}}>
+                  <div style={{display:'inline-block',textAlign:'left'}}>
+                    <p style={{fontSize:'clamp(1.1rem,1.6vw,1.35rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.6',textAlign:'center'}}>Your genius flowers when it is offered in service to the whole.</p>
+                    <p style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'6px'}}>— Richard Rudd, The Gene Keys</p>
+                  </div>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
@@ -919,8 +921,8 @@ export default function App() {
             <div className="setting1-text">
               <h2>THE SETTING</h2>
               {/* CHANGE: one line, bold, slightly bigger, "…the Loire Valley" */}
-              <p className="setting-byline-desktop">A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of …the Loire Valley.</p>
-              <p className="setting-byline-mobile">A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of …the Loire Valley.</p>
+              <p className="setting-byline-desktop">A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of the Loire Valley.</p>
+              <p className="setting-byline-mobile">A 17th-century chateau on 108 acres of pasture, farmland, and woods in the heart of the Loire Valley.</p>
             </div>
           </div>
         </section>
@@ -957,7 +959,7 @@ export default function App() {
           <div className="card card-sage reveal">
             <div className="lab-header">
               <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-label)',fontWeight:700,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
-              <h2 style={{textTransform:'none'}}>Phase I: Château as Living Laboratory</h2>
+              <h2 style={{textTransform:'none'}}>Château as Living Laboratory</h2>
               <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments <strong>in community</strong> that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, a sanctuary.</p>
             </div>
             <div className="lab-grid">
