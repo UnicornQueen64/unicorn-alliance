@@ -151,13 +151,9 @@ export default function App() {
           max-width:820px;
           text-align:left;
         }
-        .hero-sub-line1{
-          display:inline;
-        }
-        .hero-sub-miracles{
-          display:inline;
-          font-weight:600;
-        }
+        .hero-sub-line1{ display:inline; }
+        .hero-sub-break{ display:inline; }
+        .hero-sub-miracles{ display:inline; font-weight:600; }
         .hero-img-block{
           width:100%;
           flex:1;
@@ -798,7 +794,8 @@ export default function App() {
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
           .hero-text-block .hero-sub{font-size:0.795rem;font-weight:600;line-height:1.5;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:90%;}
-          .hero-sub-line1{display:block;white-space:normal;}
+          .hero-sub-line1{display:inline;white-space:normal;}
+          .hero-sub-break{display:block;}
           .hero-sub-miracles{display:block;white-space:nowrap;}
           .hero-img-block{min-height:0;height:320px;}
 
@@ -878,7 +875,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub"><span className="hero-sub-line1">Unicorns are rare. They are magical. Their horn purifies water. When they show up —</span><br/><span className="hero-sub-miracles">expect miracles.</span></p>
+              <p className="hero-sub"><span className="hero-sub-line1">Unicorns are rare. They are magical. Their horn purifies water.</span><span className="hero-sub-break"> </span><span className="hero-sub-miracles">When they show up — expect miracles.</span></p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
@@ -914,7 +911,7 @@ export default function App() {
                 {/* quote: single line, smaller if needed, Richard Rudd left under */}
                 <div className="reveal d2" style={{marginBottom:'20px',display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <div style={{display:'inline-block',textAlign:'left',maxWidth:'100%'}}>
-                    <p className="makers-quote-line" style={{fontSize:'clamp(0.82rem,1.1vw,1rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'center',whiteSpace:'nowrap'}}>Your genius flowers when it is offered in service to the whole.</p>
+                    <p className="makers-quote-line" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'center',whiteSpace:'nowrap'}}>Your genius flowers when it is offered in service to the whole.</p>
                     <p className="makers-quote-attribution" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'4px'}}>— Richard Rudd, The Gene Keys</p>
                   </div>
                 </div>
