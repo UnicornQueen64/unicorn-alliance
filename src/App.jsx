@@ -795,11 +795,11 @@ export default function App() {
           .nav-links{display:none;}
           .card{padding:28px 24px;}
 
-          .hero-text-block{padding:24px 24px 24px;}
+          .hero-text-block{padding:20px 20px 20px;}
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.82rem;font-weight:600;white-space:normal;line-height:1.5;}
+          .hero-text-block .hero-sub{font-size:0.72rem;font-weight:600;white-space:normal;line-height:1.5;}
           .hero-sub-line1{white-space:normal;display:block;}
           .hero-sub-miracles{display:block;white-space:nowrap;}
           .hero-img-block{min-height:0;height:320px;}
