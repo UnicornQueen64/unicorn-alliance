@@ -148,13 +148,17 @@ export default function App() {
           font-family:var(--serif);
           display:block;
           width:100%;
-          max-width:780px;
+          max-width:820px;
           text-align:left;
         }
-        .hero-sub-miracles{
-          font-weight:800;
-          font-style:normal;
+        .hero-sub-line1{
           display:block;
+          white-space:nowrap;
+        }
+        .hero-sub-miracles{
+          display:block;
+          font-weight:600;
+          font-style:normal;
         }
         .hero-img-block{
           width:100%;
@@ -175,6 +179,7 @@ export default function App() {
         .who-inner{
           display:flex;flex-direction:column;
           align-items:center;text-align:center;gap:0;
+          width:100%;
         }
         .who-section-title{
           font-size:var(--fs-section);
@@ -247,7 +252,7 @@ export default function App() {
         .makers-bullets{list-style:none;margin:0;padding:0;}
         .makers-bullets li{
           font-size:var(--fs-body);
-          font-weight:500;
+          font-weight:650;
           color:var(--text-body);
           line-height:1.75;
           font-family:var(--serif);
@@ -785,13 +790,15 @@ export default function App() {
 
           nav{padding:14px 20px;}
           .nav-links{display:none;}
-          .card{padding:32px 24px;}
+          .card{padding:28px 24px;}
 
           .hero-text-block{padding:24px 24px 24px;}
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:1rem;font-weight:600;white-space:normal;}
+          .hero-text-block .hero-sub{font-size:0.82rem;font-weight:600;white-space:normal;line-height:1.5;}
+          .hero-sub-line1{white-space:normal;display:inline;}
+          .hero-sub-miracles{display:block;}
           .hero-img-block{min-height:0;height:320px;}
 
           .who-logo{width:304px;height:304px;}
@@ -800,6 +807,7 @@ export default function App() {
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
           .makers-quote-attribution{text-align:left !important;}
+          .makers-quote-line{white-space:normal !important;font-size:0.85rem !important;}
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
           .setting1-text p{white-space:normal;font-size:0.95rem;}
@@ -869,7 +877,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up —<br/><span className="hero-sub-miracles">expect miracles.</span></p>
+              <p className="hero-sub"><span className="hero-sub-line1">Unicorns are rare. They are magical. Their horn purifies water. When they show up —</span><span className="hero-sub-miracles">expect miracles.</span></p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
@@ -902,11 +910,11 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                {/* quote: italic centered, Richard Rudd left-aligned flush under it as a unit */}
+                {/* quote: single line, smaller if needed, Richard Rudd left under */}
                 <div className="reveal d2" style={{marginBottom:'20px',display:'flex',flexDirection:'column',alignItems:'center'}}>
-                  <div style={{display:'inline-block',textAlign:'left'}}>
-                    <p style={{fontSize:'clamp(1.1rem,1.6vw,1.35rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.6',textAlign:'center'}}>Your genius flowers when it is offered in service to the whole.</p>
-                    <p className="makers-quote-attribution" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'6px'}}>— Richard Rudd, The Gene Keys</p>
+                  <div style={{display:'inline-block',textAlign:'left',maxWidth:'100%'}}>
+                    <p className="makers-quote-line" style={{fontSize:'clamp(0.82rem,1.1vw,1rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'center',whiteSpace:'nowrap'}}>Your genius flowers when it is offered in service to the whole.</p>
+                    <p className="makers-quote-attribution" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'4px'}}>— Richard Rudd, The Gene Keys</p>
                   </div>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
@@ -1033,8 +1041,8 @@ export default function App() {
                 <img src="/unicorn-assets/invitingthevulnerable.jpg" alt="Inviting the Vulnerable" />
               </div>
               <div className="phase2-text" style={{padding:'44px 52px'}}>
-                <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase II</span>
-                <h2 style={{textAlign:'left',marginBottom:'18px'}}>INVITING IN THE VULNERABLE</h2>
+                <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px',textAlign:'center'}}>Phase II</span>
+                <h2 style={{textAlign:'center',marginBottom:'18px'}}>INVITING IN THE VULNERABLE</h2>
                 <p>Once the culture of makers is established, Unicorn offers <strong>creative mentorship</strong> to post-treatment teenagers and young adults with addiction and mental health challenges.</p>
                 <p>Unicorn's team of makers provides highly personalized support in awakening the creative voice of the individual through projects. Whether a symphony, art exhibit, performance, or book — <strong>the creative process and the awakening of purpose heals.</strong></p>
                 <div className="phase2-highlight">
