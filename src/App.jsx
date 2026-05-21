@@ -252,7 +252,7 @@ export default function App() {
         .makers-bullets{list-style:none;margin:0;padding:0;}
         .makers-bullets li{
           font-size:var(--fs-body);
-          font-weight:650;
+          font-weight:500;
           color:var(--text-body);
           line-height:1.75;
           font-family:var(--serif);
@@ -260,6 +260,9 @@ export default function App() {
           padding-left:1.4em;
           position:relative;
           text-align:left;
+        }
+        .makers-list-bold{
+          font-weight:800;
         }
         .makers-bullets li::before{
           content:'✤';
@@ -797,7 +800,7 @@ export default function App() {
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
           .hero-text-block .hero-sub{font-size:0.82rem;font-weight:600;white-space:normal;line-height:1.5;}
-          .hero-sub-line1{white-space:normal;display:inline;}
+          .hero-sub-line1{white-space:normal;display:block;}
           .hero-sub-miracles{display:block;}
           .hero-img-block{min-height:0;height:320px;}
 
@@ -918,7 +921,7 @@ export default function App() {
                   </div>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
-                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
+                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong className="makers-list-bold">poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
                   <li>life inside a chateau in the french countryside</li>
                   <li>a diet of daily collaboration with talented peers</li>
