@@ -797,7 +797,7 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.757rem;font-weight:600;line-height:1.5;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:90%;}
+          .hero-text-block .hero-sub{font-size:0.795rem;font-weight:600;line-height:1.5;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:90%;}
           .hero-sub-line1{display:block;white-space:normal;}
           .hero-sub-miracles{display:block;white-space:nowrap;}
           .hero-img-block{min-height:0;height:320px;}
