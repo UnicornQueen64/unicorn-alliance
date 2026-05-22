@@ -789,14 +789,14 @@ export default function App() {
           .nav-links{display:none;}
           .card{padding:28px 24px;}
 
-          .hero-text-block{padding:20px 20px 20px;}
+          .hero-text-block{padding:20px 20px 20px;align-items:center;}
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:clamp(0.82rem,2.8vw,1.05rem);font-weight:700;line-height:1.55;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:92%;}
+          .hero-text-block .hero-sub{font-size:clamp(0.82rem,2.8vw,1.05rem);font-weight:700;line-height:1.55;margin:0 auto;display:block;text-align:center;width:fit-content;max-width:92%;}
           .mobile-br{display:block;}
-          .hero-sub-nowrap1{display:block;white-space:nowrap;}
-          .hero-sub-nowrap2{display:block;white-space:nowrap;}
+          .hero-sub-nowrap1{display:block;white-space:nowrap;text-align:center;}
+          .hero-sub-nowrap2{display:block;white-space:nowrap;text-align:center;}
           .hero-img-block{min-height:0;height:320px;}
 
           .who-logo{width:304px;height:304px;}
