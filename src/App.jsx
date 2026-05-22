@@ -152,6 +152,8 @@ export default function App() {
           text-align:left;
         }
         .mobile-br{ display:none; }
+        .hero-sub-nowrap1{ display:inline; }
+        .hero-sub-nowrap2{ display:inline; }
         .hero-img-block{
           width:100%;
           flex:1;
@@ -791,8 +793,10 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.795rem;font-weight:600;line-height:1.5;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:90%;}
+          .hero-text-block .hero-sub{font-size:0.72rem;font-weight:600;line-height:1.55;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:92%;}
           .mobile-br{display:block;}
+          .hero-sub-nowrap1{display:block;white-space:nowrap;}
+          .hero-sub-nowrap2{display:block;white-space:nowrap;}
           .hero-img-block{min-height:0;height:320px;}
 
           .who-logo{width:304px;height:304px;}
@@ -871,7 +875,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water.<br className="mobile-br" /> When they show up — expect miracles.</p>
+              <p className="hero-sub"><span className="hero-sub-nowrap1">Unicorns are rare. They are magical. Their horn purifies water.</span><span className="hero-sub-nowrap2"> When they show up — expect miracles.</span></p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
