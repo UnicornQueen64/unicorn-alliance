@@ -804,7 +804,7 @@ export default function App() {
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
-          .makers-quote-attribution{text-align:left !important;}
+          .makers-quote-attribution{text-align:left !important;font-size:1.05rem !important;}
           .makers-quote-line{white-space:normal !important;font-size:1.05rem !important;text-align:center !important;text-wrap:balance;}
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
@@ -912,7 +912,7 @@ export default function App() {
                 <div className="reveal d2" style={{marginBottom:'20px',display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <div style={{display:'inline-block',textAlign:'left',maxWidth:'100%'}}>
                     <p className="makers-quote-line" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'center',whiteSpace:'nowrap'}}>Your genius flowers when it is offered in service to the whole.</p>
-                    <p className="makers-quote-attribution" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'4px'}}>— Richard Rudd, The Gene Keys</p>
+                    <p className="makers-quote-attribution" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'4px'}}>— Richard Rudd, The Gene Keys</p>
                   </div>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
