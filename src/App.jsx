@@ -793,7 +793,7 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.72rem;font-weight:600;line-height:1.55;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:92%;}
+          .hero-text-block .hero-sub{font-size:clamp(0.82rem,2.8vw,1.05rem);font-weight:700;line-height:1.55;margin:0 auto;display:block;text-align:left;width:fit-content;max-width:92%;}
           .mobile-br{display:block;}
           .hero-sub-nowrap1{display:block;white-space:nowrap;}
           .hero-sub-nowrap2{display:block;white-space:nowrap;}
@@ -805,7 +805,7 @@ export default function App() {
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
           .makers-quote-attribution{text-align:left !important;}
-          .makers-quote-line{white-space:normal !important;font-size:0.85rem !important;}
+          .makers-quote-line{white-space:normal !important;font-size:var(--fs-body) !important;text-align:left !important;}
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
           .setting1-text p{white-space:normal;font-size:0.95rem;}
