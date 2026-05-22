@@ -154,6 +154,7 @@ export default function App() {
         .mobile-br{ display:none; }
         .hero-sub-nowrap1{ display:inline; }
         .hero-sub-nowrap2{ display:inline; }
+        .quote-nowrap{ display:inline; }
         .hero-img-block{
           width:100%;
           flex:1;
@@ -804,8 +805,9 @@ export default function App() {
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
-          .makers-quote-attribution{text-align:left !important;font-size:1.05rem !important;}
-          .makers-quote-line{white-space:normal !important;font-size:1.05rem !important;text-align:center !important;text-wrap:balance;}
+          .makers-quote-attribution{text-align:left !important;font-size:1.2rem !important;}
+          .makers-quote-line{white-space:normal !important;font-size:1.2rem !important;text-align:center !important;text-wrap:balance;}
+          .quote-nowrap{white-space:nowrap;display:inline;}
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
           .setting1-text p{white-space:normal;font-size:0.95rem;}
@@ -911,7 +913,7 @@ export default function App() {
                 {/* quote: single line, smaller if needed, Richard Rudd left under */}
                 <div className="reveal d2" style={{marginBottom:'20px',display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <div style={{display:'inline-block',textAlign:'left',maxWidth:'100%'}}>
-                    <p className="makers-quote-line" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'center',whiteSpace:'nowrap'}}>Your genius flowers when it is offered in service to the whole.</p>
+                    <p className="makers-quote-line" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'center'}}><span className="quote-nowrap">Your genius flowers when it is offered in</span><br className="mobile-br" /><span className="quote-nowrap"> service to the whole.</span></p>
                     <p className="makers-quote-attribution" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'4px'}}>— Richard Rudd, The Gene Keys</p>
                   </div>
                 </div>
