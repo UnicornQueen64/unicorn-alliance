@@ -806,7 +806,7 @@ export default function App() {
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
           .makers-quote-attribution{text-align:left !important;font-size:var(--fs-body) !important;}
-          .makers-quote-line{white-space:nowrap !important;font-size:0.78rem !important;text-align:left !important;}
+          .makers-quote-line{white-space:normal !important;font-size:4.2vw !important;text-align:left !important;}
           .quote-nowrap{white-space:nowrap;display:inline;}
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
