@@ -31,7 +31,7 @@ export default function App() {
           --fs-hero:    clamp(1.6rem, 4vw, 3.5rem);
           --fs-section: clamp(1.15rem, 2.3vw, 1.84rem);
           --fs-card:    clamp(0.98rem, 1.15vw, 1.09rem);
-          --fs-body:    clamp(0.95rem, 1.2vw, 1.05rem);
+          --fs-body:    clamp(1.12rem, 1.2vw, 1.22rem);
           --fs-small:   0.88rem;
           --fs-label:   0.68rem;
 
@@ -63,7 +63,7 @@ export default function App() {
           filter:brightness(1.1) saturate(0.95);
         }
         .bg-bokeh::before{content:none;}
-        @media(max-width:768px){
+        @media(max-width:768px),(max-height:500px) and (orientation:landscape){
           .bg-bokeh{
             background-attachment:scroll;
             filter:none;
@@ -89,7 +89,7 @@ export default function App() {
 
         /* ── SECTION WRAPPER — equal margins everywhere ── */
         .section-wrap{padding:0 40px 20px;}
-        @media(max-width:768px){
+        @media(max-width:768px),(max-height:500px) and (orientation:landscape){
           .section-wrap{padding:0 16px 16px;}
         }
         .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease;}
@@ -193,9 +193,9 @@ export default function App() {
           margin-bottom:32px;
         }
         .who-tagline{
-          font-size:clamp(0.75rem,1.2vw,0.95rem);
+          font-size:var(--fs-card);
           font-weight:800;
-          letter-spacing:0.28em;
+          letter-spacing:0.12em;
           text-transform:uppercase;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -770,19 +770,19 @@ export default function App() {
 
         /* Footer — hidden on desktop */
         .site-footer{display:none;}
-        @media(max-width:768px){
+        @media(max-width:768px),(max-height:500px) and (orientation:landscape){
           .site-footer{display:block;}
         }
 
         /* ══════════════════════════════════════
            RESPONSIVE
         ══════════════════════════════════════ */
-        @media(max-width:768px){
+        @media(max-width:768px),(max-height:500px) and (orientation:landscape){
           :root{
             --fs-hero:    clamp(1.4rem, 7vw, 2rem);
             --fs-section: clamp(0.9rem, 4vw, 1.2rem);
             --fs-card:    0.85rem;
-            --fs-body:    0.95rem;
+            --fs-body:    1.12rem;
             --fs-small:   0.85rem;
           }
 
@@ -912,7 +912,7 @@ export default function App() {
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
                 {/* quote: one line, left-aligned with paragraph below */}
                 <div className="reveal d2" style={{marginBottom:'20px'}}>
-                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}>"Your genius flowers when it is offered in service to the whole." — Richard Rudd, The Gene Keys</p>
+                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}><em style={{fontStyle:'italic'}}>"Your genius flowers when it is offered in service to the whole."</em> — Richard Rudd, The Gene Keys</p>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong className="makers-list-bold">poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
@@ -958,7 +958,7 @@ export default function App() {
                     {h:'Orangerie',p:'A grand orangerie — an invitation for a restaurant, exhibition space, or performance hall.'},
                     {h:'Hidden Stairways',p:"Secret passages and architectural mysteries woven into the château's bones."},
                     {h:'Original 19th Century Darkroom',p:'Explore an untouched archive of glass slides and daguerreotypes.',nowrap:true},
-                    {h:'Stables, Atelier & Glacier',p:'A medieval icehouse and historic outbuildings ripe for transformation into studios, sanctuaries, and living spaces.'},
+                    {h:'Stables, Atelier & Glacière',p:'A medieval icehouse and historic outbuildings ripe for transformation into studios, sanctuaries, and living spaces.'},
                     {h:'Pigeonnier & 17th-Century Stove',p:'A giant pigeonnier and a remarkable 17th-century stove.',nowrap:true},
                   ].map((f,i)=>(
                     <div key={i} className={`sf reveal d${i+1}`}>
