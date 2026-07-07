@@ -32,7 +32,7 @@ export default function App() {
           --fs-section: clamp(1.15rem, 2.3vw, 1.84rem);
           --fs-card:    clamp(0.98rem, 1.15vw, 1.09rem);
           --fs-body:    clamp(1.12rem, 1.2vw, 1.22rem);
-          --fs-small:   0.88rem;
+          --fs-small:   var(--fs-body);
           --fs-label:   0.68rem;
 
           /* Global weight bump: base body weight goes from 400 → 500 */
@@ -41,7 +41,7 @@ export default function App() {
           --fw-card: 900;
           --fw-label: 750;
           /* unified eyebrow size — between old Phase I (0.68rem) and Phase II label */
-          --fs-eyebrow: 0.82rem;
+          --fs-eyebrow: var(--fs-card);
         }
         html{scroll-behavior:smooth;}
         body{
@@ -195,7 +195,7 @@ export default function App() {
         .who-tagline{
           font-size:var(--fs-card);
           font-weight:800;
-          letter-spacing:0.12em;
+          letter-spacing: 0.12em;
           text-transform:uppercase;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -783,7 +783,7 @@ export default function App() {
             --fs-section: clamp(0.9rem, 4vw, 1.2rem);
             --fs-card:    0.85rem;
             --fs-body:    1.12rem;
-            --fs-small:   0.85rem;
+            --fs-small:   var(--fs-body);
           }
 
           nav{padding:14px 20px;}
@@ -805,7 +805,6 @@ export default function App() {
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
-          .makers-quote-attribution{text-align:left !important;font-size:var(--fs-body) !important;}
           .makers-quote-line{white-space:normal !important;font-size:4.2vw !important;text-align:left !important;}
           .quote-nowrap{white-space:nowrap;display:inline;}
           .setting1-img{height:280px;}
@@ -912,7 +911,7 @@ export default function App() {
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
                 {/* quote: one line, left-aligned with paragraph below */}
                 <div className="reveal d2" style={{marginBottom:'20px'}}>
-                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}><em style={{fontStyle:'italic'}}>"Your genius flowers when it is offered in service to the whole."</em> — Richard Rudd, The Gene Keys</p>
+                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}><em style={{fontStyle:'italic'}}>"Your genius flowers when it is offered in service to the whole."</em> — Richard Rudd, <strong>The Gene Keys</strong></p>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong className="makers-list-bold">poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
