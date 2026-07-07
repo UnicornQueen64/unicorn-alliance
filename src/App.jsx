@@ -31,9 +31,8 @@ export default function App() {
           --fs-hero:    clamp(1.6rem, 4vw, 3.5rem);
           --fs-section: clamp(1.15rem, 2.3vw, 1.84rem);
           --fs-card:    clamp(0.98rem, 1.15vw, 1.09rem);
-          --fs-body:    calc(clamp(1.12rem, 1.2vw, 1.22rem) + 2pt);
+          --fs-body:    clamp(1.12rem, 1.2vw, 1.22rem);
           --fs-small:   var(--fs-body);
-          --fs-subsub:  calc(var(--fs-body) + 2pt);
           --fs-label:   0.68rem;
 
           /* Global weight bump: base body weight goes from 400 → 500 */
@@ -284,7 +283,7 @@ export default function App() {
           text-align:center;
         }
         .setting1-text h2{
-          font-size:var(--fs-card);
+          font-size:var(--fs-section);
           font-weight:800;
           color:var(--text-dark);
           letter-spacing:0.04em;
@@ -294,7 +293,7 @@ export default function App() {
         .setting-byline-mobile{display:none;}
         .setting-byline-desktop{display:block;}
         .setting1-text p{
-          font-size:var(--fs-card);
+          font-size:clamp(0.82rem, 1.1vw, 1.05rem);
           font-weight:700;
           color:var(--text-body);
           line-height:1.4;
@@ -328,7 +327,7 @@ export default function App() {
           line-height:1.6;
           color:var(--text-body);
           font-family:var(--serif);
-          text-align:center;
+          text-align:left;
         }
 
         /* ══════════════════════════════════════
@@ -343,7 +342,7 @@ export default function App() {
           font-family:var(--serif);
         }
         .lab-header p{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-body);
           font-weight:500;
           color:var(--text-mid);
           line-height:1.8;
@@ -362,7 +361,7 @@ export default function App() {
         }
         .lab-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.8);}
         .lab-item h3{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-card);
           font-weight:800;
           color:var(--teal);
           margin-bottom:8px;
@@ -402,7 +401,7 @@ export default function App() {
           line-height:1.6;
         }
         .no-place p{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-small);
           font-weight:500;
           line-height:1.9;
           color:var(--text-mid);
@@ -483,7 +482,7 @@ export default function App() {
         }
         .ritual-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.78);}
         .ritual-item h3{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-card);
           font-weight:800;
           color:var(--teal);
           margin-bottom:7px;
@@ -491,7 +490,7 @@ export default function App() {
           text-align:left;
         }
         .ritual-item p{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-small);
           font-weight:500;
           line-height:1.6;
           color:var(--text-mid);
@@ -539,7 +538,7 @@ export default function App() {
         }
         .phase2-highlight{background:rgba(200,230,180,0.4);border-radius:8px;padding:18px 22px;margin-top:8px;}
         .phase2-highlight h3{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-card);
           font-weight:800;
           color:var(--teal);
           margin-bottom:6px;
@@ -580,7 +579,7 @@ export default function App() {
         }
         .rev-item:hover{transform:translateX(4px);background:rgba(255,255,255,0.8);}
         .rev-item h3{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-card);
           font-weight:800;
           color:var(--text-dark);
           margin-bottom:5px;
@@ -621,7 +620,7 @@ export default function App() {
           line-height:1.1;
         }
         .ft-sub{
-          font-size:var(--fs-card);
+          font-size:var(--fs-label);
           font-weight:800;
           letter-spacing:0.3em;
           text-transform:uppercase;
@@ -638,7 +637,7 @@ export default function App() {
           display:flex;gap:14px;
           padding:12px 0;
           border-bottom:1px solid rgba(80,130,60,0.15);
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-body);
           font-weight:500;
           line-height:1.65;
           color:var(--text-body);
@@ -678,7 +677,7 @@ export default function App() {
           line-height:1;
         }
         .art-quote-text{
-          font-size:var(--fs-card);
+          font-size:clamp(0.75rem,1.2vw,1rem);
           font-style:normal;
           font-weight:800;
           color:var(--text-dark);
@@ -750,7 +749,7 @@ export default function App() {
           font-family:var(--serif);
         }
         .cta-banner p{
-          font-size:var(--fs-subsub);
+          font-size:var(--fs-body);
           font-weight:400;
           color:rgba(255,255,255,0.78);
           margin-bottom:20px;
@@ -761,7 +760,7 @@ export default function App() {
           display:inline-block;padding:10px 36px;
           border:1px solid rgba(255,255,255,0.6);
           color:#fff;font-family:var(--serif);
-          font-size:var(--fs-card);
+          font-size:var(--fs-label);
           letter-spacing:0.22em;
           text-transform:uppercase;text-decoration:none;
           transition:all 0.3s;background:transparent;
@@ -783,7 +782,7 @@ export default function App() {
             --fs-hero:    clamp(1.4rem, 7vw, 2rem);
             --fs-section: clamp(0.9rem, 4vw, 1.2rem);
             --fs-card:    0.85rem;
-            --fs-body:    calc(1.12rem + 2pt);
+            --fs-body:    1.12rem;
             --fs-small:   var(--fs-body);
           }
 
@@ -810,7 +809,7 @@ export default function App() {
           .quote-nowrap{white-space:nowrap;display:inline;}
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
-          .setting1-text p{white-space:normal;font-size:var(--fs-card);text-align:center;}
+          .setting1-text p{white-space:normal;font-size:0.95rem;}
           .setting-byline-mobile{display:block;font-size:0.9rem;white-space:normal;font-weight:700;}
           .setting-byline-desktop{display:none;}
 
@@ -818,7 +817,7 @@ export default function App() {
           .setting2-img-col{border-radius:18px 18px 0 0;min-height:240px;}
           .setting2-content{padding:28px 20px;}
           .sf h3{text-align:center;letter-spacing:0.08em;white-space:normal;}
-          .sf p{text-align:center;white-space:normal;font-size:var(--fs-subsub);}
+          .sf p{text-align:left;white-space:normal;font-size:0.82rem;}
 
           .lab-grid{grid-template-columns:1fr;}
           .no-place{padding:28px 24px;}
@@ -912,7 +911,7 @@ export default function App() {
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
                 {/* quote: one line, left-aligned with paragraph below */}
                 <div className="reveal d2" style={{marginBottom:'20px'}}>
-                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}><em style={{fontStyle:'italic'}}>"Your genius flowers when it is offered in service to the whole."</em> — Richard Rudd, The Gene Keys</p>
+                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}><em style={{fontStyle:'italic'}}>"Your genius flowers when it is offered in service to the whole."</em> — Richard Rudd, <strong>The Gene Keys</strong></p>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong className="makers-list-bold">poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
@@ -1122,8 +1121,8 @@ export default function App() {
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
                 <p className="reveal d5" style={{fontSize:'var(--fs-body)',fontWeight:'700',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
                 <div className="reveal d6" style={{marginTop:'16px',background:'rgba(185,218,185,0.72)',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'block'}}>
-                  <p className="artwork-lozenge-desktop" style={{fontSize:'var(--fs-subsub)',fontWeight:'800',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work<br/><a href="https://meghanboody.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'800',fontSize:'var(--fs-card)'}}>HERE</a></p>
-                  <p className="artwork-lozenge-mobile" style={{display:'none',fontSize:'var(--fs-subsub)',fontWeight:'800',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://meghanboody.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'800',fontSize:'var(--fs-card)'}}>HERE</a>.</p>
+                  <p className="artwork-lozenge-desktop" style={{fontSize:'var(--fs-body)',fontWeight:'800',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work<br/><a href="https://meghanboody.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'800'}}>HERE</a></p>
+                  <p className="artwork-lozenge-mobile" style={{display:'none',fontSize:'var(--fs-body)',fontWeight:'800',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://meghanboody.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'800'}}>HERE</a>.</p>
                 </div>
               </div>
             </div>
