@@ -912,8 +912,7 @@ export default function App() {
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
                 {/* quote: one line, left-aligned with paragraph below */}
                 <div className="reveal d2" style={{marginBottom:'20px'}}>
-                    <p className="makers-quote-line" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}>Your genius flowers when it is offered in service to the whole.</p>
-                    <p className="makers-quote-attribution" style={{fontSize:'clamp(0.95rem,1.3vw,1.15rem)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',marginTop:'4px'}}>— Richard Rudd, The Gene Keys</p>
+                    <p className="makers-quote-line" style={{fontSize:'var(--fs-body)',fontStyle:'italic',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',lineHeight:'1.4',textAlign:'left',whiteSpace:'nowrap'}}>"Your genius flowers when it is offered in service to the whole." — Richard Rudd, The Gene Keys</p>
                 </div>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong className="makers-list-bold">poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
